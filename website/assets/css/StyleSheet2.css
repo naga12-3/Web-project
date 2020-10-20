@@ -1,0 +1,133 @@
+﻿*
+{
+	margin:0;
+	padding:0;
+	font-family: san-serif;
+}
+
+.hero1{
+	height: 100%;
+	width:100%;
+	background-image:linear;
+	gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4),url(banner.jpg));
+	background-position:cover;
+	background-size:cover;
+	position: absolute;
+	background: #000000;
+
+}
+
+.form-box1{
+	width:380px;
+	height: 620px;
+	position:relative;
+	margin: 4% auto;
+	background: #fff;
+	padding: 5px;
+	
+}
+
+.input-group1{
+	top:30px;
+	position: absolute;
+	width:280px;
+	transition: .5s;
+	padding-left:41px;
+}
+
+.input-field1{
+	width:100%;
+	padding: 3px 30px;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+	
+
+}
+
+.input-group1 input[type="text"], .input-group1 input[type="date"], .input-group1 input[type="time"]{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 8px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 8px 40px;
+	width: 200px;
+	outline: none;
+	
+	border-radius: 24px;
+	transition: 0.25s;
+
+} 
+
+.submit-btn1{
+	width:85%;
+	padding:10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #ff105f,#ffad06);
+	border:0;
+	outline: none;
+	border-radius: 30px;
+
+}
+
+.input-group1 input[type="text"]:focus, .input-group1 input[type="date"]:focus, .input-group1 input[type="time"]:focus{
+	
+	border-color:#000000
+}
+
+select{
+	border: 0;
+	background: none;
+	display: block;
+	margin: 8px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 8px 40px;
+	width: 280px;
+	outline: none;
+	
+	border-radius: 24px;
+	transition: 0.25s;
+
+}
+
+select:focus{
+	border-color:#000000;
+}
+
+.options{
+	text-align: center;
+	padding-left: 90px;
+	margin-left:40px;
+	color:red;
+}
+
+textarea{
+
+	border: 0;
+	background: none;
+	display: block;
+	margin: 8px auto;
+	text-align: center;
+	border: 2px solid #3498db;
+	padding: 8px 40px;
+	width: 200px;
+	outline: none;
+	
+	border-radius: 24px;
+	transition: 0.25s;
+	margin-bottom:15px;
+	padding-bottom:15px;
+
+}
+
+textarea:focus{
+	border-color:#000000;
+}

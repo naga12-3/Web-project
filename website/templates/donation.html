@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="{% static 'css/StyleSheet2.css' %}">
+</head>
+<body>
+    <div class="hero1">
+        <div class="form-box1">
+            
+            <form  class="input-group1">
+                <span>Donor Name:</span>
+                <input type="text" class="input-field1" placeholder="Donor Name" required>
+                <span>Food Item:</span>
+                <input type="text" class="input-field1" placeholder="Food Item" required>
+                <span>Quantity:</span>
+                <input type="text" class="input-field1" placeholder="Quantity" required>
+                <span>Food Timing:</span>
+                
+                <select name="food timing" id="cars">
+                  <option value="koil" class="loki" disabled selected>Food Timing</option>
+                  <option value="morning" class="options">Morning</option>
+                  <option value="afternoon" class="options">Afternoon</option>
+                  <option value="evening" class="options">Evening</option>
+                  <option value="night" class="options">Night</option>
+                </select>
+                <span>Date Of Preparation:</span>
+                <input type="date" class="input-field1" placeholder="Date Of Preparation" required>
+                <span>Time Of Preparation:</span>
+                <input type="time" class="input-field1" placeholder="Time Of Preparation" required>
+                <span>Address:</span>
+                <textarea class="text">
+                </textarea>
+                
+                <button type="button" class="submit-btn1">Donate</button>
+            </form>
+
+            
+
+        </div>
+    </div>
+</body>
+</html>
