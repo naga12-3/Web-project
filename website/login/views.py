@@ -8,3 +8,8 @@ def login(request):
     
 def donation(request):
     return render(request,'donation.html')
+
+def home(request):
+    return render(request,'home.html') 
+def profile(request):
+    return render(request,'profile.html') 
