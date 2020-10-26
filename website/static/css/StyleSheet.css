@@ -19,7 +19,7 @@
 
 .form-box{
 	width:380px;
-	height: 480px;
+	height: 580px;
 	position:relative;
 	margin: 6% auto;
 	background: #fff;
@@ -66,7 +66,7 @@
 	width:280px;
 	transition: .5s;
 }
-.input-group input[type="text"], .input-group input[type="password"], .input-group input[type="email"]{
+.input-group input[type="text"], .input-group input[type="password"], .input-group input[type="email"], .input-group input[type="number"]{
 	border: 0;
 	background: none;
 	display: block;
@@ -82,7 +82,7 @@
 
 } 
 
-.input-group input[type="text"]:focus, .input-group input[type="password"]:focus, .input-group input[type="email"]:focus{
+.input-group input[type="text"]:focus, .input-group input[type="password"]:focus, .input-group input[type="email"]:focus ,.input-group input[type="number"]:focus{
 	width:280px;
 	border-color:#2ecc71
 }
