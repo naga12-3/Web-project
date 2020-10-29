@@ -11,16 +11,18 @@
     <div class="hero1">
         <div class="form-box1">
             
-            <form  class="input-group1">
+            <form  action="donation" method="post" class="input-group1" >
+                {% csrf_token %}
+               
                 <span>Donor Name:</span>
-                <input type="text" class="input-field1" placeholder="Donor Name" required>
+                <input name="donor_name" type="text" class="input-field1" placeholder="Donor Name" required>
                 <span>Food Item:</span>
-                <input type="text" class="input-field1" placeholder="Food Item" required>
+                <input name="food_item" type="text" class="input-field1" placeholder="Food Item" required>
                 <span>Quantity:</span>
-                <input type="text" class="input-field1" placeholder="Quantity" required>
+                <input name="quantity" type="text" class="input-field1" placeholder="Quantity" required>
                 <span>Food Timing:</span>
                 
-                <select name="food timing" id="cars">
+                <select name="food_timing" id="cars">
                   <option value="ko" class="li" disabled selected>Food Timing</option>
                   <option value="morning" class="options">Morning</option>
                   <option value="afternoon" class="options">Afternoon</option>
@@ -28,14 +30,14 @@
                   <option value="night" class="options">Night</option>
                 </select>
                 <span>Date Of Preparation:</span>
-                <input type="date" class="input-field1" placeholder="Date Of Preparation" required>
+                <input name="date" type="date" class="input-field1" placeholder="Date Of Preparation" required>
                 <span>Time Of Preparation:</span>
-                <input type="time" class="input-field1" placeholder="Time Of Preparation" required>
+                <input name="time" type="time" class="input-field1" placeholder="Time Of Preparation" required>
                 <span>Address:</span>
-                <textarea class="text">
+                <textarea name="address" class="text">
                 </textarea>
                 
-                <button type="button" class="submit-btn1">Donate</button>
+                <input type="submit" class="submit-btn1" value="Donate"></input>
             </form>
 
             

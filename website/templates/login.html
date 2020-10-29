@@ -15,22 +15,25 @@
                 <button type="button" class="toggle-btn" onclick="login()">LOG IN</button>
                 <button type="button" class="toggle-btn" onclick="register()">REGISTER</button>
             </div>
-            <form id="login" class="input-group">
-                <input type="text" class="input-field" placeholder="User Name" required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
+            <form id="login" class="input-group" method="post" action="login">
+                {% csrf_token %}
+                <input name="user_name1" type="text" class="input-field" placeholder="User Name" required>
+                <input name="password1" type="password" class="input-field" placeholder="Enter Password" required>
                 <input type="checkbox" class="check-box"><span>Remember Me</span>
-                <button type="button" class="submit-btn">LOG IN</button>
+                <input type="submit" class="submit-btn" value="LOG IN">
             </form>
 
-            <form id="register" class="input-group">
-                <input type="text" class="input-field" placeholder="First Name" required>
-                <input type="text" class="input-field" placeholder="Last Name" required>
-                <input type="email" class="input-field" placeholder="Email Id" required>
+            <form id="register" class="input-group" method="post" action="register">
+                {% csrf_token %}
+                <input name="first_name1" type="text" class="input-field" placeholder="First Name" required>
+                <input name="last_name1" type="text" class="input-field" placeholder="Last Name" required>
+                <input name="user_name1" type="text" class="input-field" placeholder="User Name" required>
+                <input name="email" type="email" class="input-field" placeholder="Email Id" required>
                 
-                <input type="text" class="input-field" placeholder="Mobile No." required>
-                <input type="password" class="input-field" placeholder="Enter Password" required>
                 
-                <button type="button" class="submit-btn">REGISTER</button>
+                <input name="password" type="password" class="input-field" placeholder="Enter Password" required>
+                
+                <input type="submit" class="submit-btn" value="REGISTER">
             </form>
 
         </div>
