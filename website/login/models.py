@@ -10,6 +10,8 @@ class Donation(models.Model):
     date=models.CharField(max_length=100)
     time=models.CharField(max_length=100)
     address=models.TextField()
+    def __str__(self):
+        return self.donorname
 
 class Userregister(models.Model):
     firstname=models.CharField(max_length=100)

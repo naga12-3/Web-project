@@ -60,7 +60,7 @@
 							<br>
 							<br><br><br>
 							<img src="{% static 'images/logo.png' %}">
-							<h2 class="font-weight-bold mt-4">Katherine</h2>
+							<h2 class="font-weight-bold mt-4">{{user}}</h2>
 							<p>Donor</p>
 							<i class="far fa-edit fa-2x mb-4"></i>
 						</div>
@@ -68,18 +68,19 @@
 					<div class="col-sm-8 bg-white rounded-right">
 						<h3 class="mt-3 text-center">Profile</h3>
 						<hr class="badge-primary mt-0 w-25">
+
 						<div class="row">
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
 								<p class="font-weight-bold">First Name:</p>
-								<h6 class="text-muted">katherine</h6>
+								<h6 class="text-muted">{{user.first_name}}</h6>
 							</div>
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF ">
 								<p class="font-weight-bold">Last Name:</p>
-								<h6 class="text-muted">Langford</h6>
+								<h6 class="text-muted">{{user.last_name}}</h6>
 							</div>
 
 						</div>
@@ -91,39 +92,24 @@
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
 								<p class="font-weight-bold">Email Address:</p>
-								<h6 class="text-muted">katherine225@gmail.com</h6>
+								<h6 class="text-muted">{{user.email}}</h6>
 							</div>
-							<div class="col-sm-1">
-							</div>
-							<div class="col-sm-5" style="background-color: #EFEFEF ">
-								<p class="font-weight-bold">Phone No:</p>
-								<h6 class="text-muted">9381861337</h6>
-							</div>
-							
-						</div>
-						<br>
-						<div class="row">
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
 								<p class="font-weight-bold"> Designation:</p>
 								<h6 class="text-muted">Donor</h6>
 							</div>
-							<div class="col-sm-1">
-							</div>
-							<div class="col-sm-5" style="background-color: #EFEFEF ">
-								<p class="font-weight-bold">User Id</p>
-								<h6 class="text-muted">22124</h6>
-							</div>
 							
 						</div>
+						
 						<br>
 						<div class="row">
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
 								<p class="font-weight-bold"> No of Food Donations:</p>
-								<h6 class="text-muted">24</h6>
+								<h6 class="text-muted">{{donations}}</h6>
 							</div>
 							<div class="col-sm-1">
 							</div>

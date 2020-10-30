@@ -1,8 +1,9 @@
 from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from .models import Donation
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
+from .models import Donation
+
 
 # Create your views here.
 
@@ -30,10 +31,15 @@ def register(request):
        
         password=request.POST['password']
 
-        user=User.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname)
-        user.save()
+        if User.objects.filter(username=username).exists():
+            messages.info(request,"Username Taken")
+            return render(request,'login.html')
+        else:
 
-        return  render(request,'login.html')
+            user=User.objects.create_user(username=username,password=password,email=email,first_name=firstname,last_name=lastname)
+            user.save()
+
+            return  render(request,'login.html')
     
 def donation(request):
     if request.method=='POST':
@@ -56,4 +62,20 @@ def donation(request):
 def home(request):
     return render(request,'home.html') 
 def profile(request):
-    return render(request,'profile.html') 
+    count=0
+    users=request.user
+    
+    donations=Donation.objects.filter(donorname=users.username)
+
+    
+    if donations is not None:
+        count=len(donations)
+    else:
+        count=0
+        
+
+    context={
+        'user': request.user,
+        'donations':count
+    }
+    return render(request,'profile.html',context) 
