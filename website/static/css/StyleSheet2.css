@@ -6,24 +6,28 @@
 }
 
 .hero1{
-	height: 100%;
-	width:100%;
-	background-image:linear;
+	height: 650px;
+	width:920px;
+	background-image: url('/static/images/lo.jpg');
 	
 	background-position:cover;
 	background-size:cover;
 	position: absolute;
-	background: #000000;
+	margin:4% 5%;
+
+	
+	
 
 }
 
 .form-box1{
 	width:380px;
-	height: 620px;
+	height: 640px;
 	position:relative;
-	margin: 4% auto;
-	background: #fff;
+	margin: 4% 65%;
+	background: #ffffff;
 	padding: 5px;
+	float: left;
 	
 }
 

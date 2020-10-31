@@ -7,9 +7,12 @@
     <title>Donation Page</title>
     <link rel="stylesheet" href="{% static 'css/StyleSheet2.css' %}">
 </head>
-<body>
-    <div class="hero1">
-        <div class="form-box1">
+<body style="background-color:#51f079 ;">
+        <div class="hero1">
+        </div>
+    
+        <div class="form-box1" >
+        
             
             <form  action="donation" method="post" class="input-group1" >
                 {% csrf_token %}
@@ -43,6 +46,6 @@
             
 
         </div>
-    </div>
+    
 </body>
 </html>
