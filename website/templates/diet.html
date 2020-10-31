@@ -1,0 +1,216 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Personalized Diet</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/diet.css' %}">
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light  sticky-top" style="background-color: black;" >
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto" >
+				<li class="nav-item active">
+					<a class="nav-link" href="#" style="color: white;">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" style="color: white;">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#" style="color: white;">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#"style="color: white; ">Services</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<!--- diet sheet-->
+
+<div class="bg-light">
+    <br>
+ 
+ 
+   <center><h1 >Personalized Diet</h1> </center> 
+    <hr class="badge-primary mt-0 w-25">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-10 mt-5 pt-5">
+				<div class="row z-depth-3">
+					<div class="col-sm-4   rounded-left"  style="background-color: #DDAF94;">
+						<div class="card-block text-center text-while">
+                            <br>
+							<img src="{% static 'images/f1.jpg' %}" style="width: auto; height:180px">
+                            <br>
+                            <br>
+                            <br>
+                            <img src="{% static 'images/f2.jpg' %}" style="width: auto; height:200px">
+                            <br>
+                            <br>
+                            <br>
+                            <img src="{% static 'images/f3.jpg' %}" style="width: auto; height:194px;">
+						</div>
+					</div>
+					<div class="col-sm-8  rounded-right" style="background-color: #E8BECF;">
+                        
+					<p style="padding:.7rem">The importance of a balanced diet can’t be emphasized enough for a healthy lifestyle. 
+                        A healthy lifestyle can be attained by maintaining a balanced diet and keeping into consideration to meet all 
+                        the essential nutrients required by the body. A proper meal plan helps to attain ideal body weight and reduce
+                         the risk of chronic diseases like diabetes, cardiovascular and other types of cancer.</p>
+                        <h3> Importance of a Balanced Diet</h3>
+                        <hr class="badge-primary mt-0 w-30">
+                        <p style="padding: .7rem;">
+                         Eating a healthy diet is all about feeling great, having more energy, improving your health, and boosting your mood. Good nutrition, physical activity, and healthy body weight are essential parts of a person’s overall health and well-being.
+                        </p> <p style="padding: .7rem;">
+                         There’s no questioning the importance of healthy food in your life. Unless you maintain a proper diet for a healthy body, you may be prone to diseases, infection, or even exhaustion. The importance of nutritious food for children especially needs to be highlighted since otherwise they may end up being prone to several growth and developmental problems. Some of the most common health problems that arise from lack of a balanced diet are heart disease, cancer, stroke, and diabetes. 
+                       </p>  <p style="padding: .7rem;">
+                         Being physically active manages many health problems and improves mental health by reducing stress, depression, and pain. Regular exercise helps to prevent metabolic syndrome, stroke, high blood pressure, arthritis, and anxiety.
+                            </p>
+						
+							
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br>
+<br>
+<!--form-->
+<div >
+    <center><h1 >Personalized Diet</h1> </center> 
+     <hr class="badge-primary mt-0 w-25">
+<div class="container">
+    <div class="row d-flex justify-content-center" >
+        <div class="col-md-8 mt-5 pt-5" style="background-color: #DE354C;">
+            <form>
+            <h5>Select your age</h5>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="age1" value="option1" >
+                <label class="form-check-label" for="age1">
+                  0-6
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="age2" value="option2" >
+                <label class="form-check-label" for="age2">
+                  7-13
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="age3" value="option3" >
+                <label class="form-check-label" for="age3">
+                  14-21
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="age4" value="option4" >
+                <label class="form-check-label" for="age4">
+                  21-45
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="age" id="age5" value="option5" >
+                <label class="form-check-label" for="age5">
+                  45+
+                </label>
+              </div>
+
+              <br>
+              <h5>Select the following health insecurities if u have any</h5>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> Diabities</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> B.P</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> HyperTension</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> Cardio</label>
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1"> Eye disease</label>
+              </div>
+              <div style="padding-left:600px">
+                  <input type="submit"  class ="submit-btn1" value="submit">
+              </div>
+             
+              
+            <br>
+           
+        </form>
+      
+            
+        </div>
+    </div>
+</div>
+</div>
+
+<br><br><br><br>
+<!--- Footer -->
+<footer>
+    <div class="container-fluid padding">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <img src="{% static 'images/l_o_g_o.jpg' %}">
+                <hr class="light">
+                <p>938-186-1337</p>
+                <p>mail</p>
+                <p>Address</p>
+                <P>pINCODE</P>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>our hours</h5>
+                <hr class="light">
+                <p>Monday</p>
+                <p>Monday</p>
+                <p>Monday</p>
+                <p>Monday</p>
+            </div>
+            <div class="col-md-4">
+                <hr class="light">
+                <h5>our hours</h5>
+                <hr class="light">
+                <p>Monday</p>
+                <p>Monday</p>
+                <p>Monday</p>
+                <p>Monday</p>
+            </div>
+        </div>
+    </div>
+    </footer>
+    
+
+
+</body>
+</html>

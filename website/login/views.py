@@ -79,3 +79,8 @@ def profile(request):
         'donations':count
     }
     return render(request,'profile.html',context) 
+
+def diet(request):
+    return render(request,'diet.html')
+
+
