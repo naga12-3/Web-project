@@ -6,8 +6,9 @@ from .models import Donation
 
 
 # Create your views here.
-
+name='divya'
 def login(request):
+    global name
     if request.method=='POST':
         username=request.POST['user_name1']
        
@@ -15,7 +16,8 @@ def login(request):
         user=auth.authenticate(username=username,password=password)
         if user is not None:
             auth.login(request,user)
-            return redirect('/')
+            name=user.username
+            return render(request,'home2.html',{'name':user.username});
         else:
             messages.info(request,"Invalid Credentials")
             return redirect('login')
@@ -61,6 +63,10 @@ def donation(request):
 
 def home(request):
     return render(request,'home.html') 
+
+def home2(request):
+    global name
+    return render(request,'home2.html',{'name':name})
 def profile(request):
     count=0
     users=request.user
@@ -82,5 +88,8 @@ def profile(request):
 
 def diet(request):
     return render(request,'diet.html')
+
+def diet2(request):
+    return render(request,'diet2.html',{'name':name})
 
 
