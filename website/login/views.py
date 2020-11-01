@@ -6,7 +6,7 @@ from .models import Donation
 
 
 # Create your views here.
-name='divya'
+name='User'
 def login(request):
     global name
     if request.method=='POST':
