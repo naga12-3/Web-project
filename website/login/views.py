@@ -57,7 +57,7 @@ def donation(request):
         donor=Donation(donorname=donor_name,fooditem=food_item,quantity=quantity,foodtiming=food_timing,date=date,time=time,address=address)
         donor.save()
 
-        return redirect('/')
+        return  render(request,'home2.html',{'name':name})
     else:
         return render(request,'donation.html')
 
