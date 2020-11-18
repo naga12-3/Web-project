@@ -19,4 +19,13 @@ class Userregister(models.Model):
     email=models.CharField(max_length=100)
     mobile=models.CharField(max_length=100)
     password=models.CharField(max_length=100)
+
+class data:
+    im: str
+    desc: str
+    val: bool
+    def __init__(self,im,desc,val):
+        self.im=im
+        self.desc=desc
+        self.val=val
     

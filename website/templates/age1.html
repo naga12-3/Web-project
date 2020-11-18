@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,6 +44,18 @@
 		</div>
 	</div>
 </nav>
+
+<!--rough work-->
+<div style="padding-left: 30px; padding-bottom:10px; margin:auto;">
+{% for o in obj %}
+ {% if o.val %}
+
+  <img src="{{baseUrl}}/{{o.im}}" style="width: 400px; height:250px;">
+  <p>{{o.desc }}</p>
+ {% endif %}
+{% endfor %}
+
+</div>
 
 
 <!--- diet sheet-->
@@ -99,82 +112,7 @@
 <br>
 <br>
 <!--form-->
-<div >
-    <center><h1 >Personalized Diet</h1> </center> 
-     <hr class="badge-primary mt-0 w-25">
-<div class="container">
-    <div class="row d-flex justify-content-center" >
-        <div class="col-md-8 mt-5 pt-5" style="background-color: #DE354C;">
-            <form action="pdiet" method="post">
-              {% csrf_token %}
-            <h5>Select your age</h5>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age1" value="option1" >
-                <label class="form-check-label" for="age1">
-                  0-6
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age2" value="option2" >
-                <label class="form-check-label" for="age2">
-                  7-13
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age3" value="option3" >
-                <label class="form-check-label" for="age3">
-                  14-21
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age4" value="option4" >
-                <label class="form-check-label" for="age4">
-                  21-45
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age5" value="option5" >
-                <label class="form-check-label" for="age5">
-                  45+
-                </label>
-              </div>
 
-              <br>
-              <h5>Select the following health insecurities if u have any</h5>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> Diabities</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> B.P</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> HyperTension</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> Cardio</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1"> Eye disease</label>
-              </div>
-              <div >
-                  <input type="submit"  class ="submit-btn1" value="submit">
-              </div>
-             
-              
-            <br>
-           
-        </form>
-      
-            
-        </div>
-    </div>
-</div>
-</div>
 
 <br><br><br><br>
 <!--- Footer -->

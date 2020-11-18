@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from .models import Donation
+from .models import data
 
 
 # Create your views here.
@@ -95,10 +96,27 @@ def diet2(request):
 def pdiet(request):
     if request.method=='POST':
         age=request.POST['age']
-        l=request.POST.getlist('loki')
-        print(l)
+        l1=request.POST.getlist('loki')
+        l=[False for i in range(10)]
+        for i in l1:
+            l[int(i)-1]=True
+
+        obj=[]
+        obj.append(data("art1.jpeg","1st disease",l[0]))
+        obj.append(data("art2.jpeg","2nd disease",l[1]))
+        obj.append(data("art3.jpeg","3rd disease",l[2]))
+        obj.append(data("art4.jpeg","4th disease",l[3]))
+        obj.append(data("art5.jpeg","5th disease",l[4]))
+        obj.append(data("art6.jpeg","6th disease",l[5]))
+        obj.append(data("art7.jpeg","7th disease",l[6]))
+        obj.append(data("art8.jpeg","8th disease",l[7]))
+        obj.append(data("art5.jpeg","9th disease",l[8]))
+        obj.append(data("art3.jpeg","10th disease",l[9]))
+        for i in range(10):
+            print(obj[i].im,obj[i].desc,obj[i].val)
+
         if(age=='1'):
-            return render(request,'age1.html')
+            return render(request,'age1.html',{'obj':obj})
         elif(age=='2'):
             return render(request,'age2.html')
         elif(age=='3'):
