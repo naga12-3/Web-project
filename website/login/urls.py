@@ -9,6 +9,7 @@ urlpatterns=[
     path('donation',views.donation,name="donation"),
     path('profile',views.profile,name="profile"),
     path('diet',views.diet,name="diet"),
+    path('pdiet',views.pdiet,name="pdiet"),
     path('diet2',views.diet2,name="diet2"),
     path('home2',views.home2,name="home2")
 ]

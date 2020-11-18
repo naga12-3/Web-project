@@ -92,4 +92,19 @@ def diet(request):
 def diet2(request):
     return render(request,'diet2.html',{'name':name})
 
-
+def pdiet(request):
+    if request.method=='POST':
+        age=request.POST['age']
+        l=request.POST.getlist('loki')
+        print(l)
+        if(age=='1'):
+            return render(request,'age1.html')
+        elif(age=='2'):
+            return render(request,'age2.html')
+        elif(age=='3'):
+            return render(request,'age3.html')
+        elif(age=='4'):
+            return render(request,'age4.html')
+        elif(age=='5'):
+            return render(request,'age5.html')
+        return render(request,'home.html')
