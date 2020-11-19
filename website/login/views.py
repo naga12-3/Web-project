@@ -57,6 +57,7 @@ def donation(request):
         time=request.POST['time']
         city=request.POST['city']
         address=request.POST['address']
+
         
 
         donor=Donation(donorname=donor_name,phone=phone,fooditem=food_item,quantity=quantity,foodtiming=food_timing,date=date,time=time,city=city,address=address)
@@ -79,21 +80,30 @@ def profile(request):
     
     donations=Donation.objects.filter(donorname=users.username)
 
-    
     if donations is not None:
         count=len(donations)
         if count>0:
-            phone=donations[0].phone
+            phone=donations[count-1].phone
     else:
         count=0
         phone='-'
-        
-
+    d=[]
+    print(donations)
+    j=count
+    for i in donations[::-1]:
+        d.append([i,j])
+        j-=1
+    if(count==0):
+        count=True
+    else:
+        count=False
     context={
         'user': request.user,
         'donations':count,
         'volunteer': 'No',
-        'phone':phone
+        'phone':phone,
+        'donation':d,
+        'count'  : count
     }
     return render(request,'profile.html',context) 
 
