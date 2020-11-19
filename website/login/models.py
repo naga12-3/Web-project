@@ -9,9 +9,14 @@ class Donation(models.Model):
     foodtiming=models.CharField(max_length=100)
     date=models.CharField(max_length=100)
     time=models.CharField(max_length=100)
+    city=models.CharField(max_length=100)
     address=models.TextField()
     def __str__(self):
         return self.donorname
+
+#class volunteer(models.Model):
+
+
 
 class Userregister(models.Model):
     firstname=models.CharField(max_length=100)
