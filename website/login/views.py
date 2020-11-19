@@ -49,6 +49,7 @@ def register(request):
 def donation(request):
     if request.method=='POST':
         donor_name=request.POST['donor_name']
+        phone=request.POST['phone']
         food_item=request.POST['food_item']
         quantity=request.POST['quantity']
         food_timing=request.POST['food_timing']
@@ -58,7 +59,7 @@ def donation(request):
         address=request.POST['address']
         
 
-        donor=Donation(donorname=donor_name,fooditem=food_item,quantity=quantity,foodtiming=food_timing,date=date,time=time,city=city,address=address)
+        donor=Donation(donorname=donor_name,phone=phone,fooditem=food_item,quantity=quantity,foodtiming=food_timing,date=date,time=time,city=city,address=address)
         donor.save()
 
         return  render(request,'home2.html',{'name':name})
@@ -73,6 +74,7 @@ def home2(request):
     return render(request,'home2.html',{'name':name})
 def profile(request):
     count=0
+    phone='-'
     users=request.user
     
     donations=Donation.objects.filter(donorname=users.username)
@@ -80,14 +82,18 @@ def profile(request):
     
     if donations is not None:
         count=len(donations)
+        if count>0:
+            phone=donations[0].phone
     else:
         count=0
+        phone='-'
         
 
     context={
         'user': request.user,
         'donations':count,
-        'volunteer': 'No'
+        'volunteer': 'No',
+        'phone':phone
     }
     return render(request,'profile.html',context) 
 
