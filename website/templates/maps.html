@@ -1,88 +1,31 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Page Title</title>
-<style>
-    #map{
-        height: 400px;
-        width: 100%;
-    }
-</style>
-</head>
-<body>
-
-    <h1>MAPS</h1>
-
-
-    <div id="map"></div>
-
-
-
-
-    <script>
-        //var long=28.4867,lati=17.3850;
-        //var long,lati;
-        var valid=1;
-        window.long=0;
-        window.lati=0;
-        const success=(position) =>
-        {
-            
-            console.log("xx");
-             window.long+=parseFloat(position.coords.longitude);
-             window.lati+=parseFloat(position.coords.latitude);
-            console.log(window.long);
-            valid=0;
-            initMap();
-   
-
-        };
-        const errors=(error) =>
-        {
-            console.error(error);
-        };
-        //console.log(success.long);
-
-        navigator.geolocation.getCurrentPosition(success,errors);
-        function initMap(){
-            if (valid==0){
-                console.log(window.lati);
-                console.log(window.long);
-                var options={
-                    zoom:8,
-                    center:{lat: window.lati,lng: window.long}
-                }
-                var map= new google.maps.Map(document.getElementById("map"),options); 
-
-                var marker= new google.maps.Marker({
-                    position:{lat: window.lati,lng :window.long},
-                    map: map
-                });
-                addMarker({corods:{lat:17.4399,lng: 78.4983}});
-                function addMarker(props){
-                    var marker=new google.maps.Marker({
-                        position:props.corods,
-                        map:map
-                    });
-                    
-                }
-            
-            
-            }
-
-            
-        }
-        
-
-        
-        
-
-    
-
-
-    </script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZw8cQwKEI5f2AlvXDvuCBZfqwXERSWzA&callback=initMap">
-    </script>
-</body>
-</html>
+<!DOCTYPE html> 
+<body> 
+    <div style="width: 40%; 
+    border: 1px solid black; 
+    background-color: lightcyan; 
+    font-family: Helvetica, sans-serif;"> 
+        <div style="margin: 5%;"> 
+            <h1> 
+                <u>Dictionary Data</u> 
+            </h1> 
+            <h2> 
+                <u>All Data</u> 
+            </h2> 
+            <h4 id='alldata'></h4><br> 
+            <h2> 
+                <u>Neat Data</u> 
+            </h2> 
+            <h4 id='neatdata'></h4> 
+        </div> 
+    </div> 
+</body> 
+</html> 
+<script> 
+    var data = JSON.parse("{{data|escapejs}}"); 
+    var dataNode = document.getElementById('alldata'); 
+    dataNode.innerHTML+="{{data|escapejs}}"; 
+    dataNode = document.getElementById('neatdata'); 
+    for(var x in data){ 
+        dataNode.innerHTML+=x+' : '+data[x]+'<br><br>'; 
+    } 
+</script>

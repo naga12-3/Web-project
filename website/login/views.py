@@ -4,6 +4,17 @@ from django.contrib.auth.models import User,auth
 from django.contrib import messages
 from .models import Donation
 from .models import data
+import datetime
+from django.shortcuts import render 
+from json import dumps 
+  
+  
+def maps(request): 
+    # create data dictionary 
+    dataDictionary =[{ 'lat': 13.035246, 'lng': 77.553655 }]
+    # dump data 
+    dataJSON = dumps(dataDictionary) 
+    return render(request, 'maps.html', {'data': dataJSON}) 
 
 
 # Create your views here.
@@ -15,13 +26,17 @@ def login(request):
        
         password=request.POST['password1']
         user=auth.authenticate(username=username,password=password)
+        val=False
         if user is not None:
             auth.login(request,user)
             name=user.username
-            return render(request,'home2.html',{'name':user.username});
+            #return render(request,'home2.html',{'name':user.username});
+            return redirect('home2')
         else:
+            val=True
             messages.info(request,"Invalid Credentials")
-            return redirect('login')
+            invalid='Invalid Credentials'
+            return render(request,'login.html',{'msg':invalid})
     else:
         return render(request,'login.html')
 
@@ -146,3 +161,34 @@ def pdiet(request):
         elif(age=='5'):
             return render(request,'age5.html')
         return render(request,'home.html')
+
+
+def volunteer(request):
+    donations=[]
+    val=False
+    if request.method=='POST':
+        city='none'
+        try:
+            city=request.POST['city']
+        except:
+            print(city,'hi rohit')
+
+        x = str(datetime.datetime.now()).split()[0]
+        
+        
+        donations=Donation.objects.filter(city=city, date=x)
+        if(len(donations)==0):
+            val=True
+        #print(donations,donations[0].date)
+        #if(x==str(donations[0].date)):
+            #print('Dates are equal')
+        val1=not val
+        return render(request,'volunteer.html',{'donation':donations,'val':val,'place':city,'val1':val1,'date':x})
+
+    return render(request,'volunteer.html',{'donation':donations,'val':val,'place':''})
+
+
+def map(request):
+    a= [{ 'lat': 13.035246, 'lng': 77.553655 },{ 'lat': +17.4169, 'lng': 78.4387 },{ 'lat': 17.4239, 'lng': 78.4738 }];
+    dataJSON = dumps(a) 
+    return render(request, 'map.html', {'a': dataJSON})

@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="back" content="0; url=http://www.youtube.com">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+    <link rel="stylesheet" href="{% static 'css/StyleSheet2.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="home2">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="donation">Donate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+
+<br><br><br>
+<!--select city-->
+
+<div >
+    
+<div class="container">
+    
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+            <center><h1  >Select your city to volunteer</h1> </center> 
+            <br>
+            <form action="volunteer" method="post" >
+              {% csrf_token %}
+            
+
+              <select name="city" id="cars" required>
+                <option value="lokesh" class="varun" disabled selected>Select your city</option>
+                <option value="Tirupati" class="options">Tirupati</option>
+                <option value="Vizag" class="options">Vizag</option>
+                <option value="Rajahmundry" class="options">Rajahmundry</option>
+                <option value="Bhimavarm" class="options">Bhimavaram</option>
+                <option value="Vijaywada" class="options">Vijaywada</option>
+              </select>
+           <br>
+             
+             <input type="submit" class="submit-btn1" value="Submit" style="width: 20%; background:lightblue;"></input>
+      
+            </form>
+            <br><br>
+        </div>
+    </div>
+</div>
+</div>
+
+<br><br><br>
+{% if val1 %}
+<div >
+	<br><br>
+<center><h3>  Donations Available on {{date}} in {{place}}</h3></center>
+<center><hr style="padding-left:20px;width: 50%; background-color:blue;"></center>
+{% endif %}
+</div>
+{% for don in donation%}
+<div class="bg-light">
+	<div class="container">
+		<div class="row d-flex justify-content-center">
+			<div class="col-md-10 mt-5 pt-5">
+				<div class="row z-depth-3">
+					<div class="col-sm-4 bg-info rounded-left">
+						<div class="card-block text-center text-while">
+							
+							<br>
+							<h2 class="font-weight-bold mt-4">UserName:</h2>
+                            <h3 >{{don.donorname}}</h3>
+                            <h2 class="font-weight-bold mt-4">Address:</h2>
+                            <h3>{{don.address}}</h3>
+							
+						</div>
+					</div>
+					<div class="col-sm-8 bg-white rounded-right">
+						<h3 class="mt-3 text-center">Donation </h3>
+					<center>	<hr class="badge-primary mt-0 w-27" style="width: 50%;" > </center>
+						
+						<div class="row">
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF">
+								<p class="font-weight-bold">FoodItem:</p>
+								<h6 class="text-muted">{{don.fooditem}}</h6>
+							</div>
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF ">
+								<p class="font-weight-bold">Quantity:</p>
+								<h6 class="text-muted">{{don.quantity}}</h6>
+							</div>
+
+						</div>
+						
+							<br>
+						
+						<div class="row">
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF">
+								<p class="font-weight-bold">Date:</p>
+								<h6 class="text-muted">{{don.date}}</h6>
+							</div>
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF">
+								<p class="font-weight-bold">Time:</p>
+								<h6 class="text-muted">{{don.time}}</h6>
+							</div>
+							
+						</div>
+						
+						<br>
+						<div class="row">
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF">
+								<p class="font-weight-bold"> City:</p>
+								<h6 class="text-muted">{{don.city}}</h6>
+							</div>
+							<div class="col-sm-1">
+							</div>
+							<div class="col-sm-5" style="background-color: #EFEFEF ">
+								<p class="font-weight-bold">Phone Number:</p>
+								<h6 class="text-muted">{{don.phone}}</h6>
+							</div>
+							
+							
+						</div>
+						
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<br>
+{% endfor %}
+
+{% if val %}
+<div class="bg-light">
+	<br><br>
+<center><h3> No Available Donations on {{date}} in {{place}}</h3></center>
+<br><br>
+</div>
+{% endif %}
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'images/l_o_g_o.jpg' %}">
+				<hr class="light">
+				<p>938-186-1337</p>
+				<p>paipuri.lokesh@gmail.com</p>
+				<p>Tirupathi</p>
+				<P>517619</P>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Vision</h5>
+				<hr class="light">
+				<p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+					food waste and to make the World Hunger Free and raise awareness about food
+					loss and food waste amongst citizens
+				</p>
+				
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Team</h5>
+				<hr class="light">
+				<p>Rohit Sai</p>
+				<p>Varun Simha</p>
+				<p>Naga Lokesh</p>
+				<p>Raj Kumar</p>
+			</div>
+		</div>
+	</div>
+</footer>
+    
+
+
+</body>
+</html>

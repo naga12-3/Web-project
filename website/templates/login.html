@@ -21,14 +21,19 @@
                 
             </div>
 
-            <form id="login" class="input-group" method="post" action="login">
+            <form id="login" class="input-group" method="post" action="login" >
                 {% csrf_token %}
 
 
                 <input name="user_name1" type="text" class="input-field" placeholder="User Name" required>
                 <input name="password1" type="password" class="input-field" placeholder="Enter Password" required>
-                <input type="checkbox" class="check-box"><span>Remember Me</span>
+                
                 <input type="submit" class="submit-btn" value="LOG IN">
+
+                <br>
+                
+                <h3><center>{{msg}}</center></h3>
+             
 
                 
                 

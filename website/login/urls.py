@@ -11,5 +11,8 @@ urlpatterns=[
     path('diet',views.diet,name="diet"),
     path('pdiet',views.pdiet,name="pdiet"),
     path('diet2',views.diet2,name="diet2"),
-    path('home2',views.home2,name="home2")
+    path('home2',views.home2,name="home2"),
+    path('volunteer',views.volunteer,name="volunteer"),
+    path('map',views.map,name="map"),
+     path('maps',views.maps,name="maps")
 ]

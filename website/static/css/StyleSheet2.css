@@ -80,6 +80,18 @@
 	border-radius: 30px;
 
 }
+.submit-btn2{
+	width:85%;
+	padding:10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #dcf1f3,#76d3eb);
+	border:0;
+	outline: none;
+	border-radius: 10px;
+
+}
 
 .input-group1 input[type="text"]:focus, .input-group1 input[type="date"]:focus, .input-group1 input[type="time"]:focus{
 	
@@ -110,7 +122,7 @@ select:focus{
 	text-align: center;
 	padding-left: 90px;
 	margin-left:40px;
-	color:red;
+	color:black;
 }
 
 textarea{
@@ -118,11 +130,11 @@ textarea{
 	border: 0;
 	background: none;
 	display: block;
-	margin: 8px auto;
+	margin: 8px 8px;
 	text-align: center;
 	border: 2px solid #3498db;
-	padding: 8px 40px;
-	width: 200px;
+	padding: 5px 10px;
+	width: 150px;
 	outline: none;
 	
 	border-radius: 24px;
