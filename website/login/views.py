@@ -198,18 +198,34 @@ def map(request):
 
 def thankyou(request):
     global name,c_i_t_y
-    phone='9908248099'
-    address='add'
-    building='sudha'
+    #phone='9908248099'
+    #address='add'
+    #building='sudha'
     if(c_i_t_y=='Tirupati'):
         phone='6303435585, 9100224011'
         address='Shanath nagar, Beside central Park, Mille brown Road, Tirupati-517619'
-        building=''
-        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+        building='2-38/B , Vasavi Villa'
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
     elif(c_i_t_y=='Vizag'):
         phone='9381861337, 9100224011'
-        address='Shanath nagar, Beside central Park, Mille brown Road, Tirupati-517619'
-        building=''
-        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+        address='Venugoap nagar, Beside ZP High School, Tilak Road, Vizag-531022'
+        building='3-345/A , Nagadevi Nivas, '
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
 
-    return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+    elif(c_i_t_y=='Bhimavaram'):
+        phone='9908248099, 9100224011'
+        address='Ravi Puram, Near MAX showroom, JN Road, Bhimavaram-534201'
+        building='6-67/c , Sai Apartments '
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+    elif(c_i_t_y=='Rajahmundry'):
+        phone='9381861337, 9553665585'
+        address='Rajnagar, Beside SBI main branch, Danavaipeta , Rajahmundry-533105'
+        building='3-36/a/23 , Chandrika Manikya '
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+    elif(c_i_t_y=='Vijayawada'):
+        phone='7382906527, 9553665585'
+        address='PV Circle, Beside IMAX, Tilak Road, Vijayawada-520001'
+        building='5-55/6 , Royal Town'
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+
+    #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
