@@ -3,6 +3,28 @@
 
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script >
+      const locationButton = document.createElement("button");
+      locationButton.addEventListener("click", () => {
+    // Try HTML5 geolocation.
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const pos = {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          };
+          console.log(position.coords.longitude);
+          var address="https://maps.googleapis.com/maps/api/geocode/json?latlng="+position.coords.latitude+","+position.coords.longitude+"&key=AIzaSyDkC4c4IPa7I9VbZxXvpbhTBxzp_AutL58"
+          //console.log(address);
+          $.get({url:address,success:function(data){
+                console.log(data);
+                add=data.results[0].formatted_address;
+                console.log(add); 
+          }})
+
+    </script>
     <meta charset="utf-8" />
     <title>Donation Page</title>
     <link rel="stylesheet" href="{% static 'css/StyleSheet2.css' %}">
@@ -54,16 +76,17 @@
                 
                 </textarea></th>
                 <th>
-                <input type="submit" class="submit-btn2" value="GPS"></input>
+                
                 </th>
               </tr>
               </table>
                 <input type="submit" class="submit-btn1" value="Donate"></input>
             </form>
-
+            <input type="submit" class="submit-btn2" value="GPS" id="button"></input>
             
 
         </div>
     
 </body>
 </html>
+
