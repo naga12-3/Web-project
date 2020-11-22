@@ -19,6 +19,7 @@ def maps(request):
 
 # Create your views here.
 name='User'
+c_i_t_y='None'
 def login(request):
     global name
     if request.method=='POST':
@@ -78,7 +79,9 @@ def donation(request):
         donor=Donation(donorname=donor_name,phone=phone,fooditem=food_item,quantity=quantity,foodtiming=food_timing,date=date,time=time,city=city,address=address)
         donor.save()
 
-        return  render(request,'home2.html',{'name':name})
+        global c_i_t_y
+        c_i_t_y=city
+        return  redirect('thankyou')
     else:
         return render(request,'donation.html')
 
@@ -192,3 +195,21 @@ def map(request):
     a= [{ 'lat': 13.035246, 'lng': 77.553655 },{ 'lat': +17.4169, 'lng': 78.4387 },{ 'lat': 17.4239, 'lng': 78.4738 }];
     dataJSON = dumps(a) 
     return render(request, 'map.html', {'a': dataJSON})
+
+def thankyou(request):
+    global name,c_i_t_y
+    phone='9908248099'
+    address='add'
+    building='sudha'
+    if(c_i_t_y=='Tirupati'):
+        phone='6303435585, 9100224011'
+        address='Shanath nagar, Beside central Park, Mille brown Road, Tirupati-517619'
+        building=''
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+    elif(c_i_t_y=='Vizag'):
+        phone='9381861337, 9100224011'
+        address='Shanath nagar, Beside central Park, Mille brown Road, Tirupati-517619'
+        building=''
+        return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+
+    return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});

@@ -14,5 +14,6 @@ urlpatterns=[
     path('home2',views.home2,name="home2"),
     path('volunteer',views.volunteer,name="volunteer"),
     path('map',views.map,name="map"),
-     path('maps',views.maps,name="maps")
+     path('maps',views.maps,name="maps"),
+      path('thankyou',views.thankyou,name="thankyou")
 ]

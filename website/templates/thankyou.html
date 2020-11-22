@@ -1,0 +1,211 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="back" content="0; url=http://www.youtube.com">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+					<a class="nav-link" href="#">Hello {{name}}</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="home2">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="donation">Donate</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="/">Logout</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<div >
+    
+    <div class="container">
+        
+        <div class="row d-flex justify-content-center" class="input-group1" >
+            <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+                <center><h1  style="color: green;">Thank You For Your Donation</h1> </center> 
+
+                <br>
+               
+                <div style="padding-left: 40px;padding-right:20px;">
+                <h3 style="color:blueviolet; padding-right:40px;">How your Food will be collected:</h3>
+                
+                <hr  class="badge-primary mt-0 w-30" style="width:64%;padding-left:18px;float:left;" >
+                <br>
+                <br>
+                <table>
+                    <tr>
+               
+              <td> <img src="{% static 'images/collect2.jpg' %}" style="width: 350px; height:350px;"> </td> 
+              <td> <h5 style="padding-left: 40px;padding-right:20px;">Our Volunteers will reach you at the address given by you at the time of donation and collect food at your door step.
+                  <br>
+                  <br> As we are going through a world crisis, we assure you that we are following 
+                all the necessary covid guidelines while collecting and delivering the food.
+              </h5></td>
+            </tr>
+        </table>
+            </div>
+            <br><br><br>
+            <div style="padding-left: 40px;padding-right:20px;">
+                <h3 style="color:blueviolet;">After collecting the food:</h3>
+                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
+                <br>
+                <br>
+                <table>
+                    <tr>
+               
+               
+              <td> <h5 style="padding-left: 30px;padding-right:30px;">Once the food has been collected by the volunteers, it reaches the main center of the concerned city.
+                   <br>
+                   
+                  <br> Here the food is packed into donation boxes based on the kind of fooditem. We make sure that the food doesn't get spoiled or dirty while packing.
+                  <br><br> We are following covid protocols while packing the food. We maintain sanitized environmnet.
+              </h5></td>
+              <td> <img src="{% static 'images/donation_box.jpg' %}" style="width: 300px; height:400px;"> </td>
+            </tr>
+        </table>
+            </div>
+            <br><br>
+            <div style="padding-left: 40px;padding-right:20px;">
+                <h3 style="color:blueviolet;">Food Distribution:</h3>
+                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
+                <br>
+                <br>
+                <table>
+                    <tr>
+               
+                        <td> <img src="{% static 'images/food_don.jpg' %}" style="width: 450px; height:300px;"> </td>
+            
+              <td> <h5 style="padding-left: 30px;padding-right:30px;">The packed food is distributed to the needy people, orphanges; with atmost care.
+              </h5></td>
+              </tr>
+        </table>
+            </div>
+            <br><br>
+            <div style="padding-left: 40px;padding-right:20px;">
+                <h3 style="color:blueviolet;">Where does your Food go:</h3>
+                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
+                <br>
+              
+                <h5>Based upon the address details you provided us during the donation process, your food goes here: </h5>
+               
+                
+            </div>
+            <div style="padding-left: 40px;padding-right:20px;">
+            <table>
+                <tr>
+                    <th><img src="{% static 'images/employee.png' %}" style="height:30px;width:30px;" ></th>
+                  <th><h5 style="padding-left: 10px;padding-top:10px">Office Buiding</h5> </th>
+                  <td><p style="padding-left: 10px;padding-top:20px ;color:orange">	&nbsp;	&nbsp;	&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th><img src="{% static 'images/address_1.png' %}" style="height:30px;width:30px;" ></th>
+                  <th><h5 style="padding-left: 10px;padding-top:10px">Address</h5> </th>
+                  <td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td><td><p style="padding-left: 10px;padding-top:20px; color:orange">{{address}}</p></td>
+                
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th><img src="{% static 'images/whatsapp.png' %}" style="height:30px;width:30px;" ></th>
+                  <th><h5 style="padding-left: 10px;padding-top:10px">Phone Number</h5> </th>
+                  <td><p style="padding-left: 10px;padding-top:20px; color:orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{phone}}</p></td>
+                
+                </tr>
+            </table>
+            <table>
+                <tr>
+                    <th><img src="{% static 'images/clock.png' %}" style="height:30px;width:30px;" ></th>
+                  <th><h5 style="padding-left: 10px;padding-top:10px">Opening Timings</h5> </th>
+                  <td><p style="padding-left: 10px;padding-top:20px;color:orange" >&nbsp;09:00 AM - 11:00 PM</p></td>
+                
+                </tr>
+            </table>
+            </div>
+        
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+    
+
+<br><br><br><br>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'images/l_o_g_o.jpg' %}">
+				<hr class="light">
+				<p>938-186-1337</p>
+				<p>paipuri.lokesh@gmail.com</p>
+				<p>Tirupathi</p>
+				<P>517619</P>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Vision</h5>
+				<hr class="light">
+				<p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+					food waste and to make the World Hunger Free and raise awareness about food
+					loss and food waste amongst citizens
+				</p>
+				
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Team</h5>
+				<hr class="light">
+				<p>Rohit Sai</p>
+				<p>Varun Simha</p>
+				<p>Naga Lokesh</p>
+				<p>Raj Kumar</p>
+			</div>
+		</div>
+	</div>
+</footer>
+    
+
+
+</body>
+</html>
