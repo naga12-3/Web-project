@@ -2,7 +2,7 @@
 Food for all web application 
 
 Description: 
-The website is designed to provide a platform for redistribution of excess food and leftovers in households and different functions. Once the user has signed up successfully, he/she can donate food by informing the concerned team through the website, which automatically recognizes the location. Generous people can also donate money through any kind of upi used and we keep a track of each and every activity of the user with the help of a database. We also provide an interface for the user to help with personalized diet suggestions based upon his age and health conditions.
+The website is designed to provide a platform for redistribution of excess food and leftovers in households and different functions. Once the user has signed up successfully, he/she can donate food by informing the concerned team through the website, which automatically recognizes the location. We keep a track of each and every activity of the user with the help of a database. We also provide an interface for the user to help with personalized diet suggestions based upon his age and health conditions.
 
 We used django stack for building the application. HTML, CSS, JavaScript, Bootstrap for building front end postgresql in the backend for database. 
 
