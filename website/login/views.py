@@ -63,6 +63,7 @@ def register(request):
 
 
 def donation(request):
+
     if request.method=='POST':
         donor_name=request.POST['donor_name']
         phone=request.POST['phone']
@@ -83,16 +84,29 @@ def donation(request):
         c_i_t_y=city
         return  redirect('thankyou')
     else:
-        return render(request,'donation.html')
+        users=request.user
+        name1=users.first_name+" "+users.last_name
+        name=users.username
+        return render(request,'donation.html',{'name':name,'name1':name1})
 
 def home(request):
-    return render(request,'home.html') 
+    donations=Donation.objects.count()
+    count1=User.objects.count()-2
+    count=donations
+    print(count1,count)
+    count2=int(count*1.5)
+    return render(request,'home.html',{'count1':count1,'count':count,'count2':count2}) 
 
 def home2(request):
-
+    donations=Donation.objects.count()
+    count1=User.objects.count()-2
+    count=donations
+    
+    print(count1,count)
     users=request.user
     name=users.username
-    return render(request,'home2.html',{'name':name})
+    count2=int(count*1.5)
+    return render(request,'home2.html',{'name':name,'count1':count1,'count':count,'count2':count2})
 def profile(request):
     count=0
     phone='-'
@@ -114,17 +128,25 @@ def profile(request):
         d.append([i,j])
         j-=1
     count1=count
+    points=0
+    Donor='No'
     if(count==0):
+        points=0
         count=True
     else:
+        points=count*5+int(count/10)*10
         count=False
+        Donor='Yes'
     context={
         'user': request.user,
         'donations':count1,
         'volunteer': 'No',
         'phone':phone,
         'donation':d,
-        'count'  : count
+        'count'  : count,
+        'points':points,
+        'Donor':Donor
+
     }
     return render(request,'profile.html',context) 
 
@@ -182,7 +204,33 @@ def volunteer(request):
             print(city,'hi rohit')
 
         x = str(datetime.datetime.now()).split()[0]
-        
+        c_i_t_y=city
+        if(c_i_t_y=='Tirupati'):
+            phone='6303435585, 9100224011'
+            address='Shanath nagar, Beside central Park, Mille brown Road, Tirupati-517619'
+            building='2-38/B , Vasavi Villa'
+            #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+        elif(c_i_t_y=='Vizag'):
+            phone='9381861337, 9100224011'
+            address='Venugoap nagar, Beside ZP High School, Tilak Road, Vizag-531022'
+            building='3-345/A , Nagadevi Nivas, '
+            #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+
+        elif(c_i_t_y=='Bhimavaram'):
+            phone='9908248099, 9100224011'
+            address='Ravi Puram, Near MAX showroom, JN Road, Bhimavaram-534201'
+            building='6-67/c , Sai Apartments '
+            #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+        elif(c_i_t_y=='Rajahmundry'):
+            phone='9381861337, 9553665585'
+            address='Rajnagar, Beside SBI main branch, Danavaipeta , Rajahmundry-533105'
+            building='3-36/a/23 , Chandrika Manikya '
+            #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
+        elif(c_i_t_y=='Vijayawada'):
+            phone='6303435585, 9553665585'
+            address='PV Circle, Beside IMAX, Tilak Road, Vijayawada-520001'
+            building='5-55/6 , Royal Town'
+            #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
         
         donations=Donation.objects.filter(city=city, date=x)
         if(len(donations)==0):
@@ -191,7 +239,10 @@ def volunteer(request):
         #if(x==str(donations[0].date)):
             #print('Dates are equal')
         val1=not val
-        return render(request,'volunteer.html',{'donation':donations,'val':val,'place':city,'val1':val1,'date':x})
+        users=request.user
+        name=users.username
+
+        return render(request,'volunteer.html',{'donation':donations,'val':val,'place':city,'val1':val1,'date':x,'name':name,'phone':phone,'address':address,'building':building})
 
     return render(request,'volunteer.html',{'donation':donations,'val':val,'place':''})
 
@@ -230,9 +281,22 @@ def thankyou(request):
         building='3-36/a/23 , Chandrika Manikya '
         return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
     elif(c_i_t_y=='Vijayawada'):
-        phone='7382906527, 9553665585'
+        phone='6303435585, 9553665585'
         address='PV Circle, Beside IMAX, Tilak Road, Vijayawada-520001'
         building='5-55/6 , Royal Town'
         return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building})
 
     #return render(request,'thankyou.html',{'name':name,'phone':phone,'address':address,'building':building});
+
+def money(request):
+    users=request.user
+    name=users.username
+    return render(request,'Money.html',{'name':name})
+
+def aboutus(request):
+    return render(request,'Aboutus.html')
+
+def aboutus2(request):
+    users=request.user
+    name=users.username
+    return render(request,'Aboutus2.html',{'name':name})

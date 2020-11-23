@@ -15,5 +15,9 @@ urlpatterns=[
     path('volunteer',views.volunteer,name="volunteer"),
     path('map',views.map,name="map"),
      path('maps',views.maps,name="maps"),
-      path('thankyou',views.thankyou,name="thankyou")
+      path('thankyou',views.thankyou,name="thankyou"),
+      path('money',views.money,name="money"),
+      path('aboutus',views.aboutus,name="aboutus"),
+      path('aboutus2',views.aboutus2,name="aboutus2")
+      
 ]

@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="back" content="0; url=http://www.youtube.com">
+	<title>About Us</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item active ">
+					<a class="nav-link" href="#">Hello {{name}}</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="home2">Home</a>
+				</li>
+				
+				
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+                  </li>
+                  <li class="nav-item ">
+					<a class="nav-link" href="profile">Profile</a>
+				</li>
+				
+                  
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!-- About us -->
+<div >
+    
+    <div class="container">
+        
+        <div class="row d-flex justify-content-center" class="input-group1" >
+            <div class="col-md-6 mt-5 pt-3" style="background-color:#fefbd8 ;">
+                <center><h1  style="color:teal;" >FOOD FOR ALL</h1>
+                    <hr style="width:70%; background-color:red">
+                </center> 
+            
+            </div>
+        </div>
+    </div>
+    </div>
+<div >
+    
+    <div class="container">
+        
+        <div class="row d-flex justify-content-center" class="input-group1" >
+            <div class="col-md-10 mt-5 pt-5" style="background-color:aliceblue ;">
+                <center><h1  >About Us</h1> </center> 
+                <hr class="badge-primary mt-0 w-25">
+                <br>
+                <div  style="padding-left: 40px;padding-right:40px;">
+                <p >The website is designed to provide a platform for redistribution of excess food and leftovers in households and different functions.
+                </p><p>   Once the user has signed up successfully, he/she can donate food by informing the concerned team through the website, which
+                      automatically recognizes the location.</p> 
+                   <p>  We also provide an interface for the user to help with personalized diet suggestions based upon his age and health conditions.</p>
+                <p>We aim to bring benefits across the spectrum of society and help provide access to food to those who don’t have adequate means to access it.</p>    
+                
+                </div>
+                <br>
+                <hr style="background-color:rgb(141, 22, 125);">
+                <br><br>
+                <center><h1  > Vision</h1> </center> 
+                <hr class="badge-primary mt-0 w-25">
+                <br>
+                <div  style="padding-left: 40px;padding-right:40px;">
+               <p>Our vision is to bring a social change in every individual in-order to
+                    reduce food waste and to make the World Hunger Free and raise awareness about food loss and food waste amongst citizens</p>
+                </div>
+                <br>
+                <hr style="background-color:rgb(141, 22, 125);">
+                <br><br>
+                <center><h1  > Safety</h1> </center> 
+                <hr class="badge-primary mt-0 w-25">
+                <br>
+                <div  style="padding-left: 40px;padding-right:40px;">
+               <p>Surplus food is picked up from the food donor and packed in clean and covered containers.</p><p>
+                Surplus food is stored and transported in appropriate hygienic condition at appropriate optimum temperature suitable for perishable and non-perishable food separately.</p>
+                <p>Our staffs and volunteers are oriented with personal hygiene and sanitation practices for maintaining hygiene standards in food handling.
+                </p><p> We are maintaining a standard documentation process in which we record details of surplus food viz. details of donor, hunger spots, donation date, food item, food quantity, date of distribution.</p>    
+            </div>
+                <br>
+                <hr style="background-color:rgb(141, 22, 125);">
+                <br><br>
+                <center><h1  > What do we strive for</h1> </center> 
+                <hr class="badge-primary mt-0 w-26" style="width:70%">
+                <br>
+                <div  style="padding-left: 40px;padding-right:40px;">
+               <p>To raise awareness about food loss and food waste amongst citizens and bring about behavioral 
+                   change in them to prevent food waste at home, school or at workplace through guidance and sharing of good practices</p> 
+                <p>To raise awareness among Food businesses by encouraging them to adopt good practices to reduce food loss and food waste in their supply chains and sharing good practices</p></div>
+                <br>
+                
+                <br><br>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<br><br><br><br>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'images/l_o_g_o.jpg' %}">
+				<hr class="light">
+				<p>938-186-1337</p>
+				<p>paipuri.lokesh@gmail.com</p>
+				<p>Tirupathi</p>
+				<P>517619</P>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Vision</h5>
+				<hr class="light">
+				<p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+					food waste and to make the World Hunger Free and raise awareness about food
+					loss and food waste amongst citizens
+				</p>
+				
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Team</h5>
+				<hr class="light">
+				<p>Rohit Sai</p>
+				<p>Varun Simha</p>
+				<p>Naga Lokesh</p>
+				<p>Raj Kumar</p>
+			</div>
+		</div>
+	</div>
+</footer>
+    
+
+
+</body>
+</html>

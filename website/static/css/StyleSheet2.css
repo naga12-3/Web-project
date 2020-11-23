@@ -6,7 +6,7 @@
 }
 
 .hero1{
-	height: 760px;
+	height: 855px;
 	width:920px;
 	background-image: url('/static/images/lo.jpg');
 	
@@ -22,7 +22,7 @@
 
 .form-box1{
 	width:380px;
-	height: 750px;
+	height: 845px;
 	position:relative;
 	margin: 4% 65%;
 	background: #ffffff;

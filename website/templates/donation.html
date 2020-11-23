@@ -18,9 +18,13 @@
             <form  action="donation" method="post" class="input-group1" >
                 {% csrf_token %}
                
+                <span>Donor UserName:</span>
+                <input name="donor_name" type="text" class="input-field1" placeholder="User Name" value={{name}} readonly>
                 <span>Donor Name:</span>
-                <input name="donor_name" type="text" class="input-field1" placeholder="User Name" required>
+                <input name="donor_name1" type="text" class="input-field1" placeholder="User Name" value={{name1}} readonly>
+                
                 <span>Phone Number:</span>
+                
                 <input name="phone" type="text" class="input-field1" placeholder="Phone Number" required>
                 <span>Food Item:</span>
                 <input name="food_item" type="text" class="input-field1" placeholder="Food Item" required>
@@ -61,7 +65,7 @@
               </table>
                 <input type="submit" class="submit-btn1" value="Donate"></input>
             </form>
-            <input type="submit" class="submit-btn2" value="GPS" id="button"></input>
+         <!---   <input type="submit" class="submit-btn2" value="GPS" id="button"></input> -->
             
 
         </div>

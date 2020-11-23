@@ -31,17 +31,25 @@
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto">
 				<li class="nav-item active">
+					<a class="nav-link" href="#">Hello {{name}}</a>
+				</li>
+				<li class="nav-item active">
 					<a class="nav-link" href="home2">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="aboutus2">About</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="donation">Donate</a>
-				</li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+                  </li>
 				<li class="nav-item">
 					<a class="nav-link" href="/">Logout</a>
 				</li>
@@ -86,6 +94,7 @@
 </div>
 
 <br><br><br>
+<!-- Display donations in the available city -->
 {% if val1 %}
 <div >
 	<br><br>
@@ -176,10 +185,55 @@
 <br>
 {% endfor %}
 
+
+<!-- In case there are no donations-->
 {% if val %}
 <div class="bg-light">
 	<br><br>
 <center><h3> No Available Donations on {{date}} in {{place}}</h3></center>
+<br><br>
+</div>
+{% endif %}
+
+
+{% if val1 %}
+<div class="bg-light">
+	<br><br>
+<center><h3> If you would like to volunteer in {{place}}, please reach out to the Local Centre:</h3></center>
+<div style="padding-left: 360px;padding-right:20px;">
+	<table>
+		<tr>
+			<th><img src="{% static 'images/employee.png' %}" style="height:30px;width:30px;" ></th>
+		  <th><h5 style="padding-left: 10px;padding-top:10px">Office Buiding</h5> </th>
+		  <td><p style="padding-left: 10px;padding-top:20px ;color:orange">		&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th><img src="{% static 'images/address_1.png' %}" style="height:30px;width:30px;" ></th>
+		  <th><h5 style="padding-left: 10px;padding-top:10px">Address</h5> </th>
+		  <td><p>&nbsp;&nbsp;
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td><td><p style="padding-left: 10px;padding-top:20px; color:orange">{{address}}</p></td>
+		
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th><img src="{% static 'images/whatsapp.png' %}" style="height:30px;width:30px;" ></th>
+		  <th><h5 style="padding-left: 10px;padding-top:10px">Phone Number</h5> </th>
+		  <td><p style="padding-left: 10px;padding-top:20px; color:orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{phone}}</p></td>
+		
+		</tr>
+	</table>
+	<table>
+		<tr>
+			<th><img src="{% static 'images/clock.png' %}" style="height:30px;width:30px;" ></th>
+		  <th><h5 style="padding-left: 10px;padding-top:10px">Opening Timings</h5> </th>
+		  <td><p style="padding-left: 10px;padding-top:20px;color:orange" >&nbsp;09:00 AM - 11:00 PM</p></td>
+		
+		</tr>
+	</table>
+	</div>
 <br><br>
 </div>
 {% endif %}

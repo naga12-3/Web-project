@@ -33,14 +33,22 @@
 					<a class="nav-link" href="home2">Home</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="aboutus2">About</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="donation">Donate</a>
-				</li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="volunteer">Volunteer</a>
+				  </li>
 				<li class="nav-item">
 					<a class="nav-link" href="/">Logout</a>
 				</li>
@@ -63,8 +71,8 @@
 							<br>
 							<img src="{% static 'images/profile.png' %}">
 							<h2 class="font-weight-bold mt-4">{{user}}</h2>
-							<p>Donor</p>
-							<i class="far fa-edit fa-2x mb-4"></i>
+							
+						
 						</div>
 					</div>
 					<div class="col-sm-8 bg-white rounded-right">
@@ -99,8 +107,8 @@
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
-								<p class="font-weight-bold"> Designation:</p>
-								<h6 class="text-muted">Donor</h6>
+								<p class="font-weight-bold"> Donor:</p>
+								<h6 class="text-muted">{{Donor}}</h6>
 							</div>
 							
 						</div>
@@ -116,8 +124,8 @@
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF ">
-								<p class="font-weight-bold">Money Donated:</p>
-								<h6 class="text-muted">0</h6>
+								<p class="font-weight-bold"> Points Earned:</p>
+								<h6 class="text-muted">{{points}}</h6>
 							</div>
 							
 							
@@ -127,8 +135,8 @@
 							<div class="col-sm-1">
 							</div>
 							<div class="col-sm-5" style="background-color: #EFEFEF">
-								<p class="font-weight-bold"> Volunteer</p>
-								<h6 class="text-muted">{{volunteer}}</h6>
+								<p class="font-weight-bold"> Country</p>
+								<h6 class="text-muted">India</h6>
 							</div>
 							<div class="col-sm-1">
 							</div>
@@ -147,9 +155,31 @@
 </div>
 <br>
 <br>
+<div >  
+    <div class="container">   
+        <div class="row d-flex justify-content-center" class="input-group1" >
+            <div class="col-md-8 mt-5 pt-3" style="background-color:aliceblue ;">
+                <center><h2  style="color:teal;" >How  points are awarded</h2>
+                    <hr style="width:70%; background-color:blue">
+                </center> 
+            <p style="padding-left:40px;padding-right:40px;">We award five points for each Food Donation. 
+				An extra of ten points after every ten donations. Annually we distribute awards to people who earned more number of points. </p>
+            </div>
+        </div>
+    </div>
+    </div>
 <div >
+
+<br><br><br>
+<div >
+	<div class="container">   
+        <div class="row d-flex justify-content-center" class="input-group1" >
+            <div class="col-md-6 mt-5 pt-3" style="background-color:#EFEFEF ;">
 	<center><h2>Food Donations</h2></center>
 	<hr class="badge-primary mt-0 w-25">
+	</div>
+	</div>
+	</div>
 </div>
 {% for don,i in donation%}
 <div class="bg-light">
@@ -161,10 +191,11 @@
 						<div class="card-block text-center text-while">
 							
 							<br>
-							<img src="{% static 'images/logo.png' %}">
+						<!---	<img src="{% static 'images/logo.png' %}"> -->
+						<br><br>
 							<h2 class="font-weight-bold mt-4">{{user}}</h2>
 							<p>Donor</p>
-							<i class="far fa-edit fa-2x mb-4"></i>
+						<!---	<i class="far fa-edit fa-2x mb-4"></i> -->
 						</div>
 					</div>
 					<div class="col-sm-8 bg-white rounded-right">

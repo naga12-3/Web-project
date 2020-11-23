@@ -1,0 +1,174 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="back" content="0; url=http://www.youtube.com">
+	<title>Money Donation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+					<a class="nav-link" href="#">Hello {{name}}</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="home2">Home</a>
+				</li>
+				
+				<li class="nav-item">
+					<a class="nav-link" href="profile">Profile</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="money">Donate Money</a>
+                </li>
+                <li class="nav-item ">
+					<a class="nav-link" href="donation">Donate Food</a>
+				</li>
+				
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--Bank Details -->
+<div class="container">
+    
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-8 mt-5 pt-5" style="background-color:lightyellow ;">
+            <center><h2 style="color:teal;" >  Bank Details</h2>
+                <hr style="width:40%; background-color:red">
+            <br>
+            <table>
+                <tr>
+                    <th><h4>Account Number &nbsp;&nbsp;:</h4></th>
+                    <th><h4>&nbsp;&nbsp;38134191365</h4></th>
+                </tr>
+                <tr>
+                   <th></th> 
+                </tr>
+                <tr>
+                    <th><h4>IFSC CODE&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp:</h4></th>
+                    <th><h4>&nbsp;&nbsp;SBIN0000904</h4></th>
+                </tr>
+                <tr>
+                    <th><h4>Account Holder &nbsp;&nbsp&nbsp;&nbsp&nbsp;:</h4></th>
+                    <th><h4>&nbsp;&nbspNaga Lokesh</h4></th>
+                </tr>
+                <tr>
+                    <th><h4>Branch Name&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;&nbsp&nbsp;:</h4></th>
+                    <th><h4>&nbsp;&nbspKambala Tank, Rajahmundry</h4></th>
+                </tr>
+            </table>
+            <br><br>
+        </div>
+    </div>
+</div>
+
+<!--Pay through Upi -->
+<div class="container">
+    
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+            <center><h2 style="color:teal;" >  Pay Through Upi</h2>
+                <hr style="width:40%; background-color:red">
+      
+        <br>
+        <img src="{% static 'images/bhimqr.jpg' %}" style="width: 300px;height:300px;">
+        <br>
+
+        <br>
+        <br>
+        <table>
+            <tr>
+                <th><h4>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Upi Id &nbsp;&nbsp;:</h4></th>
+                <th><h4>&nbsp;&nbsp;paipuri.lokesh@okicici</h4></th>
+            </tr>
+            <tr>
+                <th><h4>Phone Number &nbsp;&nbsp;:</h4></th>
+                <th><h4>&nbsp;&nbsp;9553665585</h4></th>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+</center>
+        
+    </div>
+        
+    </div>
+        
+</div>
+
+
+<div class="container">
+    
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-10 mt-5 pt-5" style="background-color:lightyellow ;">
+         <center>  <h3>We use this money to help the needy people</h3> </center>
+<br>
+            </div>
+     </div>
+ </div>
+
+
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'images/l_o_g_o.jpg' %}">
+				<hr class="light">
+				<p>938-186-1337</p>
+				<p>paipuri.lokesh@gmail.com</p>
+				<p>Tirupathi</p>
+				<P>517619</P>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Vision</h5>
+				<hr class="light">
+				<p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+					food waste and to make the World Hunger Free and raise awareness about food
+					loss and food waste amongst citizens
+				</p>
+				
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Team</h5>
+				<hr class="light">
+				<p>Rohit Sai</p>
+				<p>Varun Simha</p>
+				<p>Naga Lokesh</p>
+				<p>Raj Kumar</p>
+			</div>
+		</div>
+	</div>
+</footer>
+    
+
+
+</body>
+</html>

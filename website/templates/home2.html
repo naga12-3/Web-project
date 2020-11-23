@@ -42,11 +42,21 @@
 					<a class="nav-link" href="/">Logout</a>
 					
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="donation">Donate</a>
-				</li>
+				<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+                  </li>
 				<li class="nav-item">
 					<a class="nav-link" href="volunteer">Volunteer</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="aboutus2">About</a>
 				</li>
 			</ul>
 		</div>
@@ -105,7 +115,7 @@
 			</p>
 		</div>
 	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-2">
-		<a href="diet"><button type="button" class="btn btn-outline-secondary btn-lg">
+		<a href="diet2"><button type="button" class="btn btn-outline-secondary btn-lg">
 			Personalized diet</button></a>
 
 	</div>
@@ -142,19 +152,19 @@
 		<div class="col-xs-12 col-sm-6 col-md-4">
 			<i class="fas fa-user"></i>
 			<h2>Users</h2>
-			<h3>1M+</h3>
+			<h3>{{count1}}</h3>
 
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4">
 			<i class="fas fa-user"></i>
 			<h2>Food Donations</h2>
-			<h3>4M+</h3>
+			<h3>{{count}}+</h3>
 			
 		</div>
 		<div class="col-xs-12 col-sm-6 col-md-4">
 			<i class="fas fa-user"></i>
-			<h2>Money Donated</h2>
-			<h3>5M+</h3>
+			<h2>People Served</h2>
+			<h3>{{count2}}</h3>
 			
 		</div>
 	</div>
@@ -178,7 +188,7 @@
 				product at their own plant in Colombia (Global Food Banking Network, 2014e). 
 				</p>
 				<div style="padding-left: 3.7rem;">
-			<a href="#" class="btn btn-primary">Know More</a>
+			
 			</div>
 		</div>
 		<div class="col-lg-6">
@@ -210,7 +220,7 @@
 				
 				</p>
 				<div style="padding-left:3.7rem;">
-			<a href="#" class="btn btn-primary" >Know More</a>
+			
 		</div>
 		</div>
 		<div class="col-lg-6">
