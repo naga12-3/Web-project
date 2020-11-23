@@ -18,7 +18,7 @@ def maps(request):
 
 
 # Create your views here.
-name='User'
+
 c_i_t_y='None'
 def login(request):
     global name
@@ -30,7 +30,7 @@ def login(request):
         val=False
         if user is not None:
             auth.login(request,user)
-            name=user.username
+           # name=user.username
             #return render(request,'home2.html',{'name':user.username});
             return redirect('home2')
         else:
@@ -89,7 +89,9 @@ def home(request):
     return render(request,'home.html') 
 
 def home2(request):
-    global name
+
+    users=request.user
+    name=users.username
     return render(request,'home2.html',{'name':name})
 def profile(request):
     count=0
@@ -111,13 +113,14 @@ def profile(request):
     for i in donations[::-1]:
         d.append([i,j])
         j-=1
+    count1=count
     if(count==0):
         count=True
     else:
         count=False
     context={
         'user': request.user,
-        'donations':count,
+        'donations':count1,
         'volunteer': 'No',
         'phone':phone,
         'donation':d,
@@ -129,6 +132,8 @@ def diet(request):
     return render(request,'diet.html')
 
 def diet2(request):
+    users=request.user
+    name=users.username
     return render(request,'diet2.html',{'name':name})
 
 def pdiet(request):
@@ -197,7 +202,9 @@ def map(request):
     return render(request, 'map.html', {'a': dataJSON})
 
 def thankyou(request):
-    global name,c_i_t_y
+    global c_i_t_y
+    users=request.user
+    name=users.username
     #phone='9908248099'
     #address='add'
     #building='sudha'
