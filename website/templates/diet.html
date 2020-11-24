@@ -103,46 +103,59 @@
 <br>
 <!--form-->
 <div >
-    <center><h1 >Personalized Diet</h1> </center> 
-     <hr class="badge-primary mt-0 w-25">
-<div class="container">
+    <center><h1 >Personalized Diet based on age</h1> </center>
+    <hr  style="width: 48%;background-color: #DE354C;">
+    <br>
+     
+     <div style="padding-left:170px;padding-right:170px;">
+     <div class="container-fluid padding">
+      <div class="row padding">
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/art5.jpg' %}" style="height: 320px;">
+            <div class="card-body">
+              <h4 class="card-title">For age 0-19</h4>
+              <p class="card-text">people in between 0 and 13 years of age should eat the following items.</p>
+              <a href="knowmore1" class="btn btn-outline-secondary">Know more</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/f2.jpg' %}" style="height: 320px;">
+            <div class="card-body">
+              <h4 class="card-title">For age 20-50</h4>
+              <p class="card-text">people in between 20 and 50 years of age should follow this personalized diet.</p>
+              <a href="knowmore2" class="btn btn-outline-secondary">Know more</a>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-4">
+          <div class="card">
+            <img class="card-img-top" src="{% static 'images/f1.jpg' %}" style="height: 320px;">
+            <div class="card-body">
+              <h4 class="card-title">For age 50+</h4>
+              <p class="card-text">people above age of 50 should follow this personalized diet.</p>
+              <a href="knowmore3" class="btn btn-outline-secondary">Know more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+    <br><br>
+    <center><h1 >Personalized Diet based on health issues</h1> </center>
+    <hr  style="width: 54%;background-color: #DE354C;">
+  <div class="container">
     <div class="row d-flex justify-content-center" >
         <div class="col-md-8 mt-5 pt-5" style="background-color: #DE354C;">
             <form action="pdiet" method="post">
               {% csrf_token %}
-            <h5>Select your age</h5>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age1" value="1" >
-                <label class="form-check-label" for="age1">
-                  0-6
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age2" value="2" >
-                <label class="form-check-label" for="age2">
-                  7-13
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age3" value="3" >
-                <label class="form-check-label" for="age3">
-                  14-21
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age4" value="4" >
-                <label class="form-check-label" for="age4">
-                  21-45
-                </label>
-              </div>
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="age" id="age5" value="5" >
-                <label class="form-check-label" for="age5">
-                  45+
-                </label>
-              </div>
+            
 
-              <br>
+              
               <h5>Select the following health insecurities if u have any</h5>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="1">
@@ -152,30 +165,31 @@
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="2">
                 <label class="form-check-label" for="exampleCheck1"> B.P</label>
               </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="3">
-                <label class="form-check-label" for="exampleCheck1"> HyperTension</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="4">
-                <label class="form-check-label" for="exampleCheck1"> Cardio</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="5">
-                <label class="form-check-label" for="exampleCheck1"> Eye disease</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="6">
-                <label class="form-check-label" for="exampleCheck1"> Diabities</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="7">
-                <label class="form-check-label" for="exampleCheck1"> B.P</label>
-              </div>
-              <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="8">
-                <label class="form-check-label" for="exampleCheck1"> HyperTension</label>
-              </div>
+              
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="3">
+              <label class="form-check-label" for="exampleCheck1"> Tuberculosis</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="4">
+              <label class="form-check-label" for="exampleCheck1"> Cardio</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="5">
+              <label class="form-check-label" for="exampleCheck1"> Presbyopia </label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="6">
+              <label class="form-check-label" for="exampleCheck1"> Asthma</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="7">
+              <label class="form-check-label" for="exampleCheck1"> Hepatitis</label>
+            </div>
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="8">
+              <label class="form-check-label" for="exampleCheck1"> Tuberculosis</label>
+            </div>
               <div class="form-group form-check">
                 <input type="checkbox" class="form-check-input" id="exampleCheck1" name="loki" value="9">
                 <label class="form-check-label" for="exampleCheck1"> Cardio</label>
