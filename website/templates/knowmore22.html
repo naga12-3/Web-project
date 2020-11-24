@@ -1,0 +1,209 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="back" content="0; url=http://www.youtube.com">
+	<title>Diet </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/profile.css' %}">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top">
+
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+					<a class="nav-link" href="#">Hello {{name}}</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="home2">Home</a>
+                </li>
+                <li>
+                    <a class="nav-link active" href="#">Diet</a>
+                </li>
+				<li class="nav-item">
+					<a class="nav-link" href="aboutus2">About</a>
+				</li>
+				
+				<li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+				  </li>
+				  <li class="nav-item">
+					<a class="nav-link" href="volunteer">Volunteer</a>
+				  </li>
+			
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--Displaying diet-->
+<!--Heading-->
+<div class="container">   
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-10 mt-5 pt-5" >
+          <center>  <h1 style="color: teal;">Diet for individuals between age 20 and 50</h1>
+            <hr  class="badge-primary mt-0 w-30" style="width:92%;padding-left:18px; background-color:red" >
+        </center>
+        </div>
+    </div>
+</div>
+
+<!--20's -->
+<div class="container">   
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-10 mt-5 pt-5" style="background-color:lightyellow;" >
+          <center>  <h2 >Food for individuals in their 20's</h2>
+            <hr  class="badge-primary mt-0 w-30" style="width:68%;padding-left:18px; background-color:blue" ></center>
+         <div style="padding-left: 60px;padding-right:60px; ">
+
+            <p>Men and women continue to build bone into the mid-20s, although not as readily as when younger. 
+                Meeting daily calcium requirements is important to help bones reach their peak strength. Doing so can help protect 
+                against osteoporosis and fractures later in life.
+
+            </p><p>Men and women need 1,000 mg of calcium each day. One milk serving (e.g., 1 cup milk, 3/4 cup plain yogurt,
+                 1 1/2 ounces hard cheese) supplies about 300 milligrams of calcium. Fortified non-dairy beverages such as soy,
+                  rice and almond milks contain 300 to 330 mg of calcium per one cup. So do calcium-fortified juices.
+
+            </p><p>Other good sources include canned salmon (3 ounces = 212 mg), legumes, firm tofu, almonds, tahini and
+                 cooked green vegetables such as spinach, collard greens, rapini and bok choy.
+
+            </p><p>Folate is vital to making and repairing DNA, the genetic material of cells. While both sexes 
+                require 400 micrograms (0.4 mg) daily, women who plan to get pregnant must pay extra attention to the B vitamin to 
+                guard against neural-tube defects, birth defects that affect the brain and spinal cord.
+
+
+
+            </p><p>Folate-packed foods include cooked spinach (1/2 c = 130 mcg), broccoli (1/2 c = 84), lentils (1/2 c = 189), 
+                black beans (1/2 c = 135) and avocado (1/2 medium-sized = 113). Women of childbearing age should also take a multivitamin 
+                that supplies 0.4 to 1 mg of folic acid (the synthetic form of folate).
+
+            </p><p>Iron supports metabolism, transfers oxygen to muscles, aids mental concentration and is used to make
+                 hormones and connective tissue. Men need 8 mg of the mineral each day while women need 18 mg to offset iron losses
+                  from menstruation.
+
+            </p><p>Oysters, red meat, enriched breakfast cereals, soybeans, lentils, chickpeas, cooked spinach, prunes and raisins are good sources.</p>
+        </div>
+        <br>
+        </div>
+    </div>
+</div>
+
+
+
+<!--30's-->
+
+<div class="container">   
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-10 mt-5 pt-5" style="background-color: aliceblue;">
+          <center>  <h1 >Food for individuals in their 30's</h1>
+            <hr  class="badge-primary mt-0 w-30" style="width:68%;padding-left:18px; background-color:blue" >
+        </center>
+        <div style="padding-left: 60px;padding-right:60px;">
+        <p>In the 30s, the onset of age-related muscle loss slows down our body's metabolism and calorie requirements begin to decline. If you keep your same eating pattern in your 30s (and 40s) as you did in your 20s, you'll likely gain weight. (Strength training and eating enough protein can help mitigate muscle loss.)
+
+        </p><p>For every year after 30, men require 10 fewer calories a day and women need 7 fewer. In other words, by age 40, men should be eating 100 fewer calories each day than at 30; women should cut 70 calories from their daily diet at the age of 40.
+        
+    </p><p>Trim calories from refined (white) starchy foods, sweets and sugars added to beverages and foods. Continue to emphasize foods rich in calcium, folate and iron.
+        
+    </p><p>Men and women should also focus on magnesium, a mineral that helps generate energy for the body, regulate blood pressure and blood sugar and maintain strong bones. At the age of 31, daily requirements increase for both men (420 mg) and women (320 mg).
+        
+    </p><p>To increase your intake, reach for halibut (3 oz = 90 mg), almonds (24 nuts = 80), cooked Swiss chard (1/2 c = 80), cooked spinach (1/2 c = 78), cashews (18 nuts = 75), plain yogurt (1 c = 45) and raw wheat bran (2 tbsp = 45).
+        </p>
+        <br>
+        </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!--40's-->
+<div class="container">   
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-10 mt-5 pt-5" style="background-color:lightgreen;" >
+          <center>  <h1 >Food for individuals in their 40's</h1>
+            <hr  class="badge-primary mt-0 w-30" style="width:68%;padding-left:18px; background-color:blue" >
+        </center>
+        <div style="padding-left: 60px;padding-right:60px;">
+     <p>While vitamin and mineral requirements remain unchanged in the 40s, both sexes should focus on making nutrient-dense food choices, not only to meet daily requirements but also to pave the way for the next few decades.
+
+    </p> <p> Include foods high in vitamins C and E, antioxidants that fend off harmful free radicals. Free-radical damage is thought to contribute to aging and many chronic diseases.
+        
+    </p> <p>   Excellent sources of vitamin C include red and green pepper, citrus fruit, kiwi, broccoli, Brussels sprouts, strawberries and tomato juice. Vitamin E is plentiful in wheat-germ oil, sunflower seeds, almonds, sunflower oil, hazelnuts and peanut butter.
+        
+    </p> <p>  Other dietary antioxidants include beta-carotene (e.g., carrots, sweet potato, apricots, green vegetables) and selenium (e.g., Brazil nuts, tuna, shrimp, turkey).
+        
+    </p> <p>   Unlike supplements, whole foods provide vitamins and minerals along with fibre and hundreds of phytochemicals, which work in concert to protect health.
+    </p>   <br>
+ </div>
+    </div>
+    </div>
+</div>
+
+
+<br><br><br><br>
+
+<!--- Footer -->
+<footer>
+	<div class="container-fluid padding">
+		<div class="row text-center">
+			<div class="col-md-4">
+				<img src="{% static 'images/l_o_g_o.jpg' %}">
+				<hr class="light">
+				<p>938-186-1337</p>
+				<p>paipuri.lokesh@gmail.com</p>
+				<p>Tirupathi</p>
+				<P>517619</P>
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Vision</h5>
+				<hr class="light">
+				<p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+					food waste and to make the World Hunger Free and raise awareness about food
+					loss and food waste amongst citizens
+				</p>
+				
+			</div>
+			<div class="col-md-4">
+				<hr class="light">
+				<h5>Team</h5>
+				<hr class="light">
+				<p>Rohit Sai</p>
+				<p>Varun Simha</p>
+				<p>Naga Lokesh</p>
+				<p>Raj Kumar</p>
+			</div>
+		</div>
+	</div>
+</footer>
+    
+
+
+</body>
+</html>

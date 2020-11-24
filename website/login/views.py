@@ -243,8 +243,9 @@ def volunteer(request):
         name=users.username
 
         return render(request,'volunteer.html',{'donation':donations,'val':val,'place':city,'val1':val1,'date':x,'name':name,'phone':phone,'address':address,'building':building})
-
-    return render(request,'volunteer.html',{'donation':donations,'val':val,'place':''})
+    users=request.user
+    name=users.username
+    return render(request,'volunteer.html',{'donation':donations,'val':val,'place':'','name':name})
 
 
 def map(request):
@@ -300,3 +301,28 @@ def aboutus2(request):
     users=request.user
     name=users.username
     return render(request,'Aboutus2.html',{'name':name})
+
+
+def knowmore1(request):
+    return render(request,'knowmore1.html')
+def knowmore2(request):
+    return render(request,'knowmore2.html')
+
+def knowmore3(request):
+    return render(request,'knowmore3.html')
+
+def knowmore12(request):
+    users=request.user
+    name=users.username
+    return render(request,'knowmore12.html',{'name':name})
+
+def knowmore22(request):
+    users=request.user
+    name=users.username
+    return render(request,'knowmore22.html',{'name':name})
+
+def knowmore32(request):
+    users=request.user
+    name=users.username
+    return render(request,'knowmore32.html',{'name':name})
+

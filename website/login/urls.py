@@ -18,6 +18,13 @@ urlpatterns=[
       path('thankyou',views.thankyou,name="thankyou"),
       path('money',views.money,name="money"),
       path('aboutus',views.aboutus,name="aboutus"),
-      path('aboutus2',views.aboutus2,name="aboutus2")
+     path('aboutus2',views.aboutus2,name="aboutus2"),
+     path('knowmore1',views.knowmore1,name="knowmore1"),
+     path('knowmore2',views.knowmore2,name="knowmore2"),
+     path('knowmore3',views.knowmore3,name="knowmore3"),
+     path('knowmore12',views.knowmore12,name="knowmore12"),
+     path('knowmore22',views.knowmore22,name="knowmore22"),
+     path('knowmore32',views.knowmore32,name="knowmore32")
+    
       
 ]
