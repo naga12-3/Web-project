@@ -1,0 +1,186 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> Personalized Diet</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+	<link rel="stylesheet" href="{% static 'css/diet.css' %}">
+</head>
+<body class="bg-light">
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-light sticky-top"  >
+	<div class="container-fluid">
+		<a class="navbar-brand" href="#">
+			<img src="{% static 'images/l_o_g_o.jpg' %}">
+		</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" >
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto" >
+                <li class="nav-item active">
+					<a class="nav-link" href="#" >Hello {{name}}</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link" href="home2" >Home</a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="#" >Personalized Diet</a>
+				</li>
+				
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Donate
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="donation">Donate Food</a>
+                      <a class="dropdown-item" href="money">Donate Money</a>
+                      
+                    </div>
+                  </li>
+                  <li class="nav-item">
+					<a class="nav-link" href="aboutus2" >About</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>
+
+<!--Diet Importance-->
+<div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-10 mt-5 pt-5" class="color" style="background-color:lightyellow ;">
+        <center><h1 style="color:teal">Diet to reduce your health problems</h1>
+        <hr style="background-color:red; width:80%">
+        </center>
+        <div style="padding-left: 60px; padding-right:60px;">
+          <p>Having too much sugar, salt, or fat in your diet can raise your risk for certain diseases.
+             Healthy eating can lower your risk for heart disease, stroke, diabetes, and other health conditions. 
+             A healthy eating plan emphasizes vegetables, fruits, whole grains, and fat-free or low-fat dairy products;
+              includes lean meats, poultry, fish, beans, eggs, and nuts; and limits saturated and trans fats, sodium, and added sugars.</p>
+            <p>
+              The researchers investigated the relationships of 10 different foods and nutrients with deaths related to heart disease, 
+              stroke, and type 2 diabetes. They also compared data on participants’ age, sex, ethnicity, and education. They found that
+               nearly half of all the deaths in the United States in 2012 that were caused by cardiometabolic diseases were associated 
+               with suboptimal eating habits. Of 702,308 adult deaths due to heart disease, stroke, and type 2 diabetes, 318,656 (45%) 
+               were associated with inadequate consumption of certain foods and nutrients widely considered vital for healthy living, 
+               and overconsumption of other foods that are not.
+            </p>
+            <p>
+
+            </p>
+        </div>
+       </div>
+  </div>
+</div>
+<!--diseases -->
+
+{% for o in obj %}
+ {% if o.val %}
+ <div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-8 mt-5 pt-5" class="color" style="background-color:lightgreen ;">
+        <center><h2 >Food Diet for {{o.desc}} patients</h1>
+          <hr style="background-color:blue; width:80%">
+          </center>
+          <div style="padding-left:40px;padding-right:40px;">
+          {% for oi in o.dis_points %}
+         <p>{{oi}}</p>
+        {% endfor %}
+        <h3 style="color:red;"><u>Food Items</u> :</h3>
+        <ul>
+        {% for oi in o.dis_par1 %}
+        <li>{{oi}}</li>
+       {% endfor %}
+       </ul>
+        {% for oi in o.im %}
+        <img src="{{baseUrl}}/{{oi}}" style="width: 400px; height:250px;">
+        {% endfor %}
+        <br>
+        <br>
+      </div>
+      </div>
+  </div>
+</div>
+  
+ {% endif %}
+{% endfor %}
+
+
+
+
+<!--Eight Principles-->
+<div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-10 mt-5 pt-5" class="color" style="background-color:lightyellow ;">
+        <center><h1 style="color:teal">Eight principles of food and health</h1>
+        <hr style="background-color:red; width:80%">
+        </center>
+        <div style="padding-left: 70px; padding-right:70px;">
+          <ol>
+            <li>Nutrition represents the combined activities of countless food substances. The whole is greater than the sum of its parts.
+            </li><li>Solely taking vitamin supplements is not the way to good health.
+            </li><li>There are virtually no nutrients in animal-based foods that are not better provided by plants.
+            </li><li>Genes do not determine diseases on their own. Genes function only by being activated or expressed, and nutrition plays a critical role in determining which genes, good and bad, are expressed. 
+            </li><li>Nutrition can substantially control the adverse effects of noxious chemicals.
+            </li><li>The same nutrition that prevents disease in its early stages (before diagnosis) can also halt or reverse disease in later stages (after diagnosis).
+            </li><li>Nutrition that is truly beneficial for one chronic disease will support health across the board.
+            </li><li>Good nutrition creates health in all areas of our existence. All parts are interconnected.
+              </li>
+              <br>
+          </ol>
+        </div>
+       </div>
+  </div>
+</div>
+
+<br><br><br><br>
+<!--- Footer -->
+<footer>
+  <div class="container-fluid padding">
+    <div class="row text-center">
+      <div class="col-md-4">
+        <img src="{% static 'images/l_o_g_o.jpg' %}">
+        <hr class="light">
+        <p>938-186-1337</p>
+        <p>paipuri.lokesh@gmail.com</p>
+        <p>Tirupathi</p>
+        <P>517619</P>
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Vision</h5>
+        <hr class="light">
+        <p style="padding-left: 2.3rem ;padding-right: 2.3rem;">Our vision is to bring a social change in every individual in-order to reduce
+          food waste and to make the World Hunger Free and raise awareness about food
+          loss and food waste amongst citizens
+        </p>
+        
+      </div>
+      <div class="col-md-4">
+        <hr class="light">
+        <h5>Team</h5>
+        <hr class="light">
+        <p>Rohit Sai</p>
+        <p>Varun Simha</p>
+        <p>Naga Lokesh</p>
+        <p>Raj Kumar</p>
+      </div>
+    </div>
+  </div>
+  </footer>
+    
+
+
+</body>
+</html>

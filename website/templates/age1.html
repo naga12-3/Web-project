@@ -28,91 +28,110 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarResponsive">
 			<ul class="navbar-nav ml-auto" >
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="/" >Home</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#" >Age1</a>
+				<li class="nav-item active">
+					<a class="nav-link" href="#" >Personalized Diet</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#" >Contact</a>
+					<a class="nav-link" href="aboutus" >About</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link" href="#">Services</a>
+					<a class="nav-link" href="login">Donate</a>
 				</li>
 			</ul>
 		</div>
 	</div>
 </nav>
 
-<!--rough work-->
-<div style="padding-left: 30px; padding-bottom:10px; margin:auto;">
+<!--Diet Importance-->
+<div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-10 mt-5 pt-5" class="color" style="background-color:lightyellow ;">
+        <center><h1 style="color:teal">Diet to reduce your health problems</h1>
+        <hr style="background-color:red; width:80%">
+        </center>
+        <div style="padding-left: 60px; padding-right:60px;">
+          <p>Having too much sugar, salt, or fat in your diet can raise your risk for certain diseases.
+             Healthy eating can lower your risk for heart disease, stroke, diabetes, and other health conditions. 
+             A healthy eating plan emphasizes vegetables, fruits, whole grains, and fat-free or low-fat dairy products;
+              includes lean meats, poultry, fish, beans, eggs, and nuts; and limits saturated and trans fats, sodium, and added sugars.</p>
+            <p>
+              The researchers investigated the relationships of 10 different foods and nutrients with deaths related to heart disease, 
+              stroke, and type 2 diabetes. They also compared data on participants’ age, sex, ethnicity, and education. They found that
+               nearly half of all the deaths in the United States in 2012 that were caused by cardiometabolic diseases were associated 
+               with suboptimal eating habits. Of 702,308 adult deaths due to heart disease, stroke, and type 2 diabetes, 318,656 (45%) 
+               were associated with inadequate consumption of certain foods and nutrients widely considered vital for healthy living, 
+               and overconsumption of other foods that are not.
+            </p>
+            <p>
+
+            </p>
+        </div>
+       </div>
+  </div>
+</div>
+<!--diseases -->
+
 {% for o in obj %}
  {% if o.val %}
-
-  <img src="{{baseUrl}}/{{o.im}}" style="width: 400px; height:250px;">
-  <p>{{o.desc }}</p>
+ <div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-8 mt-5 pt-5" class="color" style="background-color:lightgreen ;">
+        <center><h2 >Food Diet for {{o.desc}} patients</h1>
+          <hr style="background-color:blue; width:80%">
+          </center>
+          <div style="padding-left:40px;padding-right:40px;">
+          {% for oi in o.dis_points %}
+         <p>{{oi}}</p>
+        {% endfor %}
+        <h3 style="color:red;"><u>Food Items</u> :</h3>
+        <ul>
+        {% for oi in o.dis_par1 %}
+        <li>{{oi}}</li>
+       {% endfor %}
+       </ul>
+        {% for oi in o.im %}
+        <img src="{{baseUrl}}/{{oi}}" style="width: 400px; height:250px;">
+        {% endfor %}
+        <br>
+        <br>
+      </div>
+      </div>
+  </div>
+</div>
+  
  {% endif %}
 {% endfor %}
 
+
+
+
+<!--Eight Principles-->
+<div class="container">   
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-10 mt-5 pt-5" class="color" style="background-color:lightyellow ;">
+        <center><h1 style="color:teal">Eight principles of food and health</h1>
+        <hr style="background-color:red; width:80%">
+        </center>
+        <div style="padding-left: 70px; padding-right:70px;">
+          <ol>
+            <li>Nutrition represents the combined activities of countless food substances. The whole is greater than the sum of its parts.
+            </li><li>Solely taking vitamin supplements is not the way to good health.
+            </li><li>There are virtually no nutrients in animal-based foods that are not better provided by plants.
+            </li><li>Genes do not determine diseases on their own. Genes function only by being activated or expressed, and nutrition plays a critical role in determining which genes, good and bad, are expressed. 
+            </li><li>Nutrition can substantially control the adverse effects of noxious chemicals.
+            </li><li>The same nutrition that prevents disease in its early stages (before diagnosis) can also halt or reverse disease in later stages (after diagnosis).
+            </li><li>Nutrition that is truly beneficial for one chronic disease will support health across the board.
+            </li><li>Good nutrition creates health in all areas of our existence. All parts are interconnected.
+              </li>
+              <br>
+          </ol>
+        </div>
+       </div>
+  </div>
 </div>
-
-
-<!--- diet sheet-->
-
-<div class="bg-light">
-    <br>
- 
- 
-   <center><h1 >Personalized Diet</h1> </center> 
-    <hr class="badge-primary mt-0 w-25">
-	<div class="container">
-		<div class="row d-flex justify-content-center">
-			<div class="col-md-10 mt-5 pt-5">
-				<div class="row z-depth-3">
-					<div class="col-sm-4   rounded-left"  style="background-color: #DDAF94;">
-						<div class="card-block text-center text-while">
-                            <br>
-							<img src="{% static 'images/f1.jpg' %}" style="width: auto; height:180px">
-                            <br>
-                            <br>
-                            <br>
-                            <img src="{% static 'images/f2.jpg' %}" style="width: auto; height:200px">
-                            <br>
-                            <br>
-                            <br>
-                            <img src="{% static 'images/f3.jpg' %}" style="width: auto; height:194px;">
-						</div>
-					</div>
-					<div class="col-sm-8  rounded-right" style="background-color: #E8BECF;">
-                        
-					<p style="padding:.7rem">The importance of a balanced diet can’t be emphasized enough for a healthy lifestyle. 
-                        A healthy lifestyle can be attained by maintaining a balanced diet and keeping into consideration to meet all 
-                        the essential nutrients required by the body. A proper meal plan helps to attain ideal body weight and reduce
-                         the risk of chronic diseases like diabetes, cardiovascular and other types of cancer.</p>
-                        <h3> Importance of a Balanced Diet</h3>
-                        <hr class="badge-primary mt-0 w-30">
-                        <p style="padding: .7rem;">
-                         Eating a healthy diet is all about feeling great, having more energy, improving your health, and boosting your mood. Good nutrition, physical activity, and healthy body weight are essential parts of a person’s overall health and well-being.
-                        </p> <p style="padding: .7rem;">
-                         There’s no questioning the importance of healthy food in your life. Unless you maintain a proper diet for a healthy body, you may be prone to diseases, infection, or even exhaustion. The importance of nutritious food for children especially needs to be highlighted since otherwise they may end up being prone to several growth and developmental problems. Some of the most common health problems that arise from lack of a balanced diet are heart disease, cancer, stroke, and diabetes. 
-                       </p>  <p style="padding: .7rem;">
-                         Being physically active manages many health problems and improves mental health by reducing stress, depression, and pain. Regular exercise helps to prevent metabolic syndrome, stroke, high blood pressure, arthritis, and anxiety.
-                            </p>
-						
-							
-					
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-<br>
-<br>
-<!--form-->
-
 
 <br><br><br><br>
 <!--- Footer -->

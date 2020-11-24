@@ -27,11 +27,17 @@ class Userregister(models.Model):
     password=models.CharField(max_length=100)
 
 class data:
-    im: str
+    im: list
     desc: str
     val: bool
-    def __init__(self,im,desc,val):
+    dis_points:list
+    dis_par1:list
+    dis_par2:list
+    def __init__(self,im,desc,val,dis_points,dis_par1,dis_par2):
         self.im=im
         self.desc=desc
         self.val=val
+        self.dis_points=dis_points
+        self.dis_par1=dis_par1
+        self.dis_par2=dis_par2
     
