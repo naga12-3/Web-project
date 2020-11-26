@@ -33,7 +33,7 @@
 				<li class="nav-item active">
 					<a class="nav-link" href="#">Hello {{name}}</a>
 				</li>
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="home2">Home</a>
 				</li>
 				<li class="nav-item">
@@ -84,7 +84,7 @@
               </select>
            <br>
              
-             <input type="submit" class="submit-btn1" value="Submit" style="width: 20%; background:lightblue;"></input>
+             <input type="submit" class="submit-btn1" value="Submit" style="width: 30%; background:lightblue;"></input>
       
             </form>
             <br><br>
@@ -197,22 +197,24 @@
 
 
 {% if val1 %}
-<div class="bg-light">
-	<br><br>
-<center><h3> If you would like to volunteer in {{place}}, please reach out to the Local Centre:</h3></center>
-<div style="padding-left: 360px;padding-right:20px;">
+<div class="container">
+    
+	<div class="row d-flex justify-content-center" class="input-group1" >
+		<div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+			<center><h2>If you would like  to volunteer at {{place}} please reach out to the local center</h2></center>
+  <div style="padding-left: 40px;padding-right:20px;">
 	<table>
 		<tr>
 			<th><img src="{% static 'images/employee.png' %}" style="height:30px;width:30px;" ></th>
 		  <th><h5 style="padding-left: 10px;padding-top:10px">Office Buiding</h5> </th>
-		  <td><p style="padding-left: 10px;padding-top:20px ;color:orange">		&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
+		  <td><p style="padding-left: 10px;padding-top:20px ;color:orange">	&nbsp;	&nbsp;	&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
 		</tr>
 	</table>
 	<table>
 		<tr>
 			<th><img src="{% static 'images/address_1.png' %}" style="height:30px;width:30px;" ></th>
 		  <th><h5 style="padding-left: 10px;padding-top:10px">Address</h5> </th>
-		  <td><p>&nbsp;&nbsp;
+		  <td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td><td><p style="padding-left: 10px;padding-top:20px; color:orange">{{address}}</p></td>
 		
 		</tr>
@@ -234,8 +236,9 @@
 		</tr>
 	</table>
 	</div>
-<br><br>
-</div>
+  </div>
+  </div>
+  </div>
 {% endif %}
 <!--- Footer -->
 <footer>

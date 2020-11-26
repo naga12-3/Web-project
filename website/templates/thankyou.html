@@ -32,7 +32,7 @@
                 <li class="nav-item active">
 					<a class="nav-link" href="#">Hello {{name}}</a>
 				</li>
-				<li class="nav-item active">
+				<li class="nav-item ">
 					<a class="nav-link" href="home2">Home</a>
 				</li>
 				<li class="nav-item">
@@ -57,121 +57,125 @@
 	</div>
 </nav>
 
-<div >
-    
-    <div class="container">
-        
-        <div class="row d-flex justify-content-center" class="input-group1" >
-            <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
-                <center><h1  style="color: green;">Thank You For Your Donation</h1> </center> 
 
-                <br>
-               
-                <div style="padding-left: 40px;padding-right:20px;">
-                <h3 style="color:blueviolet; padding-right:40px;">How your Food will be collected:</h3>
-                
-                <hr  class="badge-primary mt-0 w-30" style="width:64%;padding-left:18px;float:left;" >
-                <br>
-                <br>
-                <table>
-                    <tr>
-               
-              <td> <img src="{% static 'images/collect2.jpg' %}" style="width: 350px; height:350px;"> </td> 
-              <td> <h5 style="padding-left: 40px;padding-right:20px;">Our Volunteers will reach you at the address given by you at the time of donation and collect food at your door step.
-                  <br>
-                  <br> As we are going through a world crisis, we assure you that we are following 
-                all the necessary covid guidelines while collecting and delivering the food.
-              </h5></td>
-            </tr>
-        </table>
-            </div>
-            <br><br><br>
-            <div style="padding-left: 40px;padding-right:20px;">
-                <h3 style="color:blueviolet;">After collecting the food:</h3>
-                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
-                <br>
-                <br>
-                <table>
-                    <tr>
-               
-               
-              <td> <h5 style="padding-left: 30px;padding-right:30px;">Once the food has been collected by the volunteers, it reaches the main center of the concerned city.
-                   <br>
-                   
-                  <br> Here the food is packed into donation boxes based on the kind of fooditem. We make sure that the food doesn't get spoiled or dirty while packing.
-                  <br><br> We are following covid protocols while packing the food. We maintain sanitized environmnet.
-              </h5></td>
-              <td> <img src="{% static 'images/donation_box.jpg' %}" style="width: 300px; height:400px;"> </td>
-            </tr>
-        </table>
-            </div>
-            <br><br>
-            <div style="padding-left: 40px;padding-right:20px;">
-                <h3 style="color:blueviolet;">Food Distribution:</h3>
-                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
-                <br>
-                <br>
-                <table>
-                    <tr>
-               
-                        <td> <img src="{% static 'images/food_don.jpg' %}" style="width: 450px; height:300px;"> </td>
-            
-              <td> <h5 style="padding-left: 30px;padding-right:30px;">The packed food is distributed to the needy people, orphanges; with atmost care.
-              </h5></td>
-              </tr>
-        </table>
-            </div>
-            <br><br>
-            <div style="padding-left: 40px;padding-right:20px;">
-                <h3 style="color:blueviolet;">Where does your Food go:</h3>
-                <hr  class="badge-primary mt-0 w-30" style="width:48%;padding-left:18px;float:left;" >
-                <br>
-              
-                <h5>Based upon the address details you provided us during the donation process, your food goes here: </h5>
-               
-                
-            </div>
-            <div style="padding-left: 40px;padding-right:20px;">
-            <table>
-                <tr>
-                    <th><img src="{% static 'images/employee.png' %}" style="height:30px;width:30px;" ></th>
-                  <th><h5 style="padding-left: 10px;padding-top:10px">Office Buiding</h5> </th>
-                  <td><p style="padding-left: 10px;padding-top:20px ;color:orange">	&nbsp;	&nbsp;	&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th><img src="{% static 'images/address_1.png' %}" style="height:30px;width:30px;" ></th>
-                  <th><h5 style="padding-left: 10px;padding-top:10px">Address</h5> </th>
-                  <td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td><td><p style="padding-left: 10px;padding-top:20px; color:orange">{{address}}</p></td>
-                
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th><img src="{% static 'images/whatsapp.png' %}" style="height:30px;width:30px;" ></th>
-                  <th><h5 style="padding-left: 10px;padding-top:10px">Phone Number</h5> </th>
-                  <td><p style="padding-left: 10px;padding-top:20px; color:orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{phone}}</p></td>
-                
-                </tr>
-            </table>
-            <table>
-                <tr>
-                    <th><img src="{% static 'images/clock.png' %}" style="height:30px;width:30px;" ></th>
-                  <th><h5 style="padding-left: 10px;padding-top:10px">Opening Timings</h5> </th>
-                  <td><p style="padding-left: 10px;padding-top:20px;color:orange" >&nbsp;09:00 AM - 11:00 PM</p></td>
-                
-                </tr>
-            </table>
-            </div>
+
+  <div class="container">
         
-                <br><br>
-            </div>
-        </div>
-    </div>
+    <div class="row d-flex justify-content-center" class="input-group1" >
+        <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+            <center><h1  style="color: green;">Thank You For Your Donation</h1> </center> 
 </div>
-    
+</div>
+  </div>
+<div class="bg-light">
+<div class="container">
+  <div class="row d-flex justify-content-center">
+    <div class="col-md-8 mt-5 pt-5">
+      <div class="row z-depth-3">
+        <div class="col-sm-5   rounded-left"  style="background-color: #DDAF94;">
+          <div class="card-block text-center text-while">
+                          <br>
+            <img src="{% static 'images/collect2.jpg' %}" style="width: auto; height:200px">
+                          <br>
+                          <br>
+                          <br>
+                          <img src="{% static 'images/donation_box.jpg' %}" style="width: auto; height:400px">
+                          <br>
+                          <br>
+                          <br>
+                          <img src="{% static 'images/food_don.jpg' %}" style="width: auto; height:194px;">
+                          <br>
+                          <br>
+          </div>
+        </div>
+        <div class="col-sm-7  rounded-right" style="background-color: #E8BECF;">
+             
+               <br>
+               <h2 style="color: blueviolet;"><u>How your Food will be collected:</u></h2>
+             </center>         
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">Our Volunteers will reach you at the address given by you at the time of donation and collect food at your door step.
+        </p>
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">
+          Here the food is packed into donation boxes based on the kind of fooditem. We make sure that the food doesn't get spoiled or dirty while packing.
+                  </p><p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem"> We are following covid protocols while packing the food. We maintain sanitized environmnet.
+        </p>
+        <h2 style="color: blueviolet;"><u style="color: blue;">After collecting the food:</u></h2>
+                      
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">Once the food has been collected by the volunteers, it reaches the main center of the concerned city.</p>
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">
+          Here the food is packed into donation boxes based on the kind of fooditem. We make sure that the food doesn't get spoiled or dirty while packing.  </p><p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem"> We are following covid protocols while packing the food. We maintain sanitized environmnet.
+        </p>
+        <h2 style="color: blueviolet;"><u >Food Distribution:</u></h2>
+                      
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">The packed food is distributed to the needy people, orphanges; with atmost care.</p>
+        <p style="padding-left:.7rem;padding-right:.7rem;padding-top:.3rem;padding-bottom:0.3rem">We make sure that only healthy food reaches the people in need of it.</p>
+        
+                     
+          
+            
+        
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+
+
+<div class="container">
+        
+  <div class="row d-flex justify-content-center" class="input-group1" >
+      <div class="col-md-8 mt-5 pt-5" style="background-color:aliceblue ;">
+
+<div style="padding-left: 40px;padding-right:20px;">
+  <table>
+      <tr>
+          <th><img src="{% static 'images/employee.png' %}" style="height:30px;width:30px;" ></th>
+        <th><h5 style="padding-left: 10px;padding-top:10px">Office Buiding</h5> </th>
+        <td><p style="padding-left: 10px;padding-top:20px ;color:orange">	&nbsp;	&nbsp;	&nbsp; &nbsp;&nbsp;&nbsp;{{building}}</p></td>
+      </tr>
+  </table>
+  <table>
+      <tr>
+          <th><img src="{% static 'images/address_1.png' %}" style="height:30px;width:30px;" ></th>
+        <th><h5 style="padding-left: 10px;padding-top:10px">Address</h5> </th>
+        <td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p></td><td><p style="padding-left: 10px;padding-top:20px; color:orange">{{address}}</p></td>
+      
+      </tr>
+  </table>
+  <table>
+      <tr>
+          <th><img src="{% static 'images/whatsapp.png' %}" style="height:30px;width:30px;" ></th>
+        <th><h5 style="padding-left: 10px;padding-top:10px">Phone Number</h5> </th>
+        <td><p style="padding-left: 10px;padding-top:20px; color:orange">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{phone}}</p></td>
+      
+      </tr>
+  </table>
+  <table>
+      <tr>
+          <th><img src="{% static 'images/clock.png' %}" style="height:30px;width:30px;" ></th>
+        <th><h5 style="padding-left: 10px;padding-top:10px">Opening Timings</h5> </th>
+        <td><p style="padding-left: 10px;padding-top:20px;color:orange" >&nbsp;09:00 AM - 11:00 PM</p></td>
+      
+      </tr>
+  </table>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
 
 <br><br><br><br>
 
